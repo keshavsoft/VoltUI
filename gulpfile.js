@@ -183,7 +183,7 @@ gulp.task('minify:html:index', function () {
 });
 
 // Clean
-gulp.task('clean:dist', function () {
+gulp.task('clean:publicDir', function () {
     return del([paths.dist.base]);
 });
 
@@ -192,7 +192,7 @@ gulp.task('clean:dev', function () {
 });
 
 // Compile and copy scss/css
-gulp.task('copy:dist:css', function () {
+gulp.task('copy:publicDir:css', function () {
     return gulp.src([paths.src.scss + '/volt/**/*.scss', paths.src.scss + '/custom/**/*.scss', paths.src.scss + '/volt.scss'])
         .pipe(wait(500))
         .pipe(sourcemaps.init())
@@ -217,7 +217,7 @@ gulp.task('copy:dev:css', function () {
 });
 
 // Copy Html
-gulp.task('copy:dist:html', function () {
+gulp.task('copy:publicDir:html', function () {
     return gulp.src([paths.src.html])
         .pipe(fileinclude({
             prefix: '@@',
@@ -242,7 +242,7 @@ gulp.task('copy:dev:html', function () {
 });
 
 // Copy index
-gulp.task('copy:dist:html:index', function () {
+gulp.task('copy:publicDir:html:index', function () {
     return gulp.src([paths.src.base + '*.html'])
         .pipe(fileinclude({
             prefix: '@@',
@@ -267,7 +267,7 @@ gulp.task('copy:dev:html:index', function () {
 });
 
 // Copy assets
-gulp.task('copy:dist:assets', function () {
+gulp.task('copy:publicDir:assets', function () {
     return gulp.src(paths.src.assets)
         .pipe(gulp.dest(paths.dist.assets))
 });
@@ -278,7 +278,7 @@ gulp.task('copy:dev:assets', function () {
 });
 
 // Copy node_modules to vendor
-gulp.task('copy:dist:vendor', function() {
+gulp.task('copy:publicDir:vendor', function() {
     return gulp.src(npmDist(), { base: paths.src.node_modules })
       .pipe(gulp.dest(paths.dist.vendor));
 });
@@ -289,7 +289,7 @@ gulp.task('copy:dev:vendor', function() {
 });
 
 gulp.task('build:dev', gulp.series('clean:dev', 'copy:dev:css', 'copy:dev:html', 'copy:dev:html:index', 'copy:dev:assets', 'beautify:css', 'copy:dev:vendor'));
-gulp.task('build:dist', gulp.series('clean:dist', 'copy:dist:css', 'copy:dist:html', 'copy:dist:html:index', 'copy:dist:assets', 'minify:css', 'minify:html', 'minify:html:index', 'copy:dist:vendor'));
+gulp.task('build:publicDir', gulp.series('clean:publicDir', 'copy:publicDir:css', 'copy:publicDir:html', 'copy:publicDir:html:index', 'copy:publicDir:assets', 'minify:css', 'minify:html', 'minify:html:index', 'copy:publicDir:vendor'));
 
 // Default
 gulp.task('default', gulp.series('serve'));
