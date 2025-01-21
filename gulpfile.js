@@ -28,6 +28,7 @@ var sass = require('gulp-sass')(require('sass'));
 var wait = require('gulp-wait');
 var sourcemaps = require('gulp-sourcemaps');
 var fileinclude = require('gulp-file-include');
+const fse = require('fs-extra');
 
 // Define paths
 
@@ -117,12 +118,12 @@ gulp.task('assets', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('vendor', function() {
+gulp.task('vendor', function () {
     return gulp.src(npmDist(), { base: paths.src.node_modules })
-      .pipe(gulp.dest(paths.temp.vendor));
+        .pipe(gulp.dest(paths.temp.vendor));
 });
 
-gulp.task('serve', gulp.series('scss', 'html', 'index', 'assets', 'vendor', function() {
+gulp.task('serve', gulp.series('scss', 'html', 'index', 'assets', 'vendor', function () {
     browserSync.init({
         server: paths.temp.base
     });
@@ -147,8 +148,8 @@ gulp.task('minify:css', function () {
     return gulp.src([
         paths.dist.css + '/volt.css'
     ])
-    .pipe(cleanCss())
-    .pipe(gulp.dest(paths.dist.css))
+        .pipe(cleanCss())
+        .pipe(gulp.dest(paths.dist.css))
 });
 
 // Minify Html
@@ -185,6 +186,12 @@ gulp.task('minify:html:index', function () {
 // Clean
 gulp.task('clean:publicDir', function () {
     return del([paths.dist.base]);
+});
+
+gulp.task('end:publicDir', async () => {
+    fse.copySync(`${paths.src.base}/Js`, `${paths.dist.base}/Js`);
+
+    return await true;
 });
 
 gulp.task('clean:dev', function () {
@@ -278,18 +285,23 @@ gulp.task('copy:dev:assets', function () {
 });
 
 // Copy node_modules to vendor
-gulp.task('copy:publicDir:vendor', function() {
+gulp.task('copy:publicDir:vendor', function () {
     return gulp.src(npmDist(), { base: paths.src.node_modules })
-      .pipe(gulp.dest(paths.dist.vendor));
+        .pipe(gulp.dest(paths.dist.vendor));
 });
 
-gulp.task('copy:dev:vendor', function() {
+gulp.task('copy:publicDir:vendor', function () {
     return gulp.src(npmDist(), { base: paths.src.node_modules })
-      .pipe(gulp.dest(paths.dev.vendor));
+        .pipe(gulp.dest(paths.dist.vendor));
+});
+
+gulp.task('copy:dev:vendor', function () {
+    return gulp.src(npmDist(), { base: paths.src.node_modules })
+        .pipe(gulp.dest(paths.dev.vendor));
 });
 
 gulp.task('build:dev', gulp.series('clean:dev', 'copy:dev:css', 'copy:dev:html', 'copy:dev:html:index', 'copy:dev:assets', 'beautify:css', 'copy:dev:vendor'));
-gulp.task('build:publicDir', gulp.series('clean:publicDir', 'copy:publicDir:css', 'copy:publicDir:html', 'copy:publicDir:html:index', 'copy:publicDir:assets', 'minify:css', 'minify:html', 'minify:html:index', 'copy:publicDir:vendor'));
+gulp.task('build:publicDir', gulp.series('clean:publicDir', 'copy:publicDir:css', 'copy:publicDir:html', 'copy:publicDir:html:index', 'copy:publicDir:assets', 'minify:css', 'minify:html', 'minify:html:index', 'copy:publicDir:vendor', "end:publicDir"));
 
 // Default
 gulp.task('default', gulp.series('serve'));
