@@ -1,5 +1,6 @@
 const StartFunc = () => {
+    console.log("Welcome from KeshavSoft");
 
 };
 
-export { StartFunc };
+StartFunc();
