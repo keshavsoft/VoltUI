@@ -1,8 +1,14 @@
-import { StartFunc as StartFuncFormLoad } from "./FormLoad/startFunc.js";
+import { StartFunc as StartFuncShowOnDom } from "./ShowOnDom.js";
+import { StartFunc as StartFuncFormLoad } from "./FormLoad/StartFunc.js";
 
 const StartFunc = () => {
-    console.log("Welcome from KeshavSoft");
-    StartFuncFormLoad();
+    let jVarLocalFromAdmin = true;
+
+    if (jVarLocalFromAdmin) {
+        StartFuncFormLoad();
+
+        StartFuncShowOnDom();
+    };
 };
 
 StartFunc();
