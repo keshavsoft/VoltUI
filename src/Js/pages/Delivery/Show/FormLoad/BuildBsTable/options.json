@@ -1,0 +1,83 @@
+{
+    "toolbar": "#toolbar",
+    "search": "true",
+    "searchable": "true",
+    "idfield": "pk",
+    "pagination": "true",
+    "showFooter": "true",
+    "pageList":"[10,25,50,100,all]",
+    "pageSize": "5",
+    "filterControl": true,  
+    "data": [],
+    "onClickRow": "",
+    "columns": [
+        {
+            "field": "KS-Serial",
+            "title": "#",
+            "formatter": "jFLocalSerialColumn"
+        },
+        {
+            "field": "QrCodeId",
+            "title": "QrCode"
+        },
+        {
+            "field": "OrderNumber",
+            "title": "Order ID"
+        },
+        {
+            "title": "BranchName",
+            "field": "BranchName",
+            "filterControl": "select"
+        },
+        {
+            "field": "To_Delivery_Scan",
+            "title": "Status",
+            "filterControl": "select"
+        },
+        {
+            "title": "TimeSpan",
+            "field": "TimeSpan"
+        },
+        {
+            "field": "ItemName",
+            "title": "ItemName"
+        },
+        {
+            "title": "Rate",
+            "field": "Rate",
+            "align":"right",
+            "filtercontrol": "select",
+            "formatter": "",
+            "footerFormatter":""
+        },
+        {
+            "field": "OrderDateTime",
+            "title": "Order DateTime"
+        },
+        {
+            "field": "DeliveryDateTime",
+            "title": "Delivery DateTime"
+        },
+        {
+            "field": "EntryScan_DC",
+            "title": "DC #"
+        },
+        {
+            "title": "DC Date",
+            "field": "EntryScan_DCDate"
+        },
+        {
+            "field": "location",
+            "title": "DC Factory",
+            "filtercontrol": "select"
+        },
+        {
+            "field": "CustomerName",
+            "title": "Customer Name"
+        },
+        {
+            "field": "CustomerMobileNumber",
+            "title": "Mobile Number"
+        }
+    ]
+}
