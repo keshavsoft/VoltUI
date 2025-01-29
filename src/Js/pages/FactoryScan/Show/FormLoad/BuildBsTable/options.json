@@ -1,0 +1,115 @@
+{
+    "toolbar": "#toolbar",
+    "search": "true",
+    "searchable": "true",
+    "idfield": "pk",
+    "pageList":"[10,25,50,100,all]",
+    "pageSize": "5",
+    "showFooter": "true",
+    "data": [],
+    "onClickRow": "",
+    "pagination": "true",
+    "filterControl": true,
+    "columns": [
+        {
+            "field": "KS-Serial",
+            "title": "#",
+            "formatter": "jFLocalSerialColumn"
+        },
+        {
+            "field": "QrCodeId",
+            "title": "Qr Code"
+        },
+        {
+            "field": "OrderNumber",
+            "title": "Order ID",
+            "filtercontrol": "select"
+        },
+        {
+            "field": "ItemName",
+            "title": "Item Name"
+        },
+        {
+            "field": "BranchScan",
+            "title": "Branch",
+            "filterControl":"select"
+        },
+        {
+            "field": "EntryScan",
+            "title": "Factory",
+            "filterControl":"select"
+        },
+        {
+            "field": "EntryReturnScan",
+            "title": "Entry Return",
+            "filterControl": "select"
+        },
+        {
+            "field": "WashingScan",
+            "title": "Washing",
+            "filterControl": "select"
+        },
+        {
+            "field": "PressingScan",
+            "title": "Pressing",
+            "filterControl": "select"
+        },
+        {
+            "field": "PressingRejectScan",
+            "title": "Process Return",
+            "filterControl": "select"
+        },
+        {
+            "field": "PressingRewash",
+            "title": "Rewash",
+            "filterControl": "select"
+        },
+        {
+            "field": "CompletionScan",
+            "title": "Completion",
+            "filterControl": "select"
+        },
+        {
+            "field": "FactoryToBranchScan",
+            "title": "FFC Scan",
+            "filterControl": "select"
+        },
+        {
+            "title": "Time Span",
+            "field": "TimeSpan"
+        },
+        {
+            "title": "Rate",
+            "field": "Rate",
+            "align":"right",
+            "filtercontrol": "select",
+            "formatter": "",
+            "footerFormatter":""
+        },
+        {
+            "field": "OrderDateTime",
+            "title": "Order DateTime"
+        },
+        {
+            "field": "DeliveryDateTime",
+            "title": "Delivery Date"
+        },
+        {
+            "field": "location",
+            "title": "DC Factory"
+        },
+        {
+            "field": "BranchName",
+            "title": "Branch Name"
+        },
+        {
+            "field": "CustomerName",
+            "title": "Customer Name"
+        },
+        {
+            "field": "CustomerMobileNumber",
+            "title": "Mobile Number"
+        }
+        
+    ]
+}
