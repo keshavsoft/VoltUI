@@ -5,17 +5,8 @@ const $table = $('#table');
 
 const StartFunc = ({ inResponseAsJson }) => {
     optionsJson.data = inResponseAsJson;
-
     ForColumns({ inColumns: optionsJson.columns });
-    jFLocalPrepareColumns({ inFirstRow: inResponseAsJson[0] });
-
     $table.bootstrapTable(optionsJson);
-};
-
-const jFLocalPrepareColumns = ({ inFirstRow }) => {
-    Object.keys(inFirstRow).forEach((inKey) => {
-        optionsJson.columns.push({ field: inKey, title: inKey });
-    });
 };
 
 export { StartFunc };

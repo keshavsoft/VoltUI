@@ -12,6 +12,15 @@
             "field": "KS-Serial",
             "title": "#",
             "formatter": ""
+        },
+        {
+            "field": "FileName",
+            "title": "FileName"
+        },
+        {
+            "field": "FileDataCount",
+            "title": "FileData",
+            "formatter": ""
         }
     ]
 }
