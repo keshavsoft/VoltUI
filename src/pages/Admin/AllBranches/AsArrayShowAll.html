@@ -19,7 +19,7 @@
 <html lang="en">
 
 <head>
-    @@include('./Admin/AsArray/_head.html', {
+    @@include('./Admin/AllBranches/_head.html', {
     "path": "../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
@@ -36,20 +36,20 @@
 <body>
 
 
-    @@include('./Admin/AsArray/_nav.html', {
+    @@include('./Admin/AllBranches/_nav.html', {
     "path": "../../.."
     })
 
-    @@include('./Admin/AsArray/_sidenav.html', {
+    @@include('./Admin/AllBranches/_sidenav.html', {
     "path": "../../..",
-    "page": "showall",
-    "parentmenu":"time"
+    "page": "AsArrayShowAll",
+    "parentmenu":"AsArray"
     })
 
 
     <main class="content">
 
-        @@include('./Admin/AsArray/_topbar.html', {
+        @@include('./Admin/AllBranches/_topbar.html', {
         "path": "../../.."
         })
 
@@ -94,17 +94,17 @@
             </div>
         </div>
 
-        @@include('./Admin/AsArray/_footer.html', {
+        @@include('./Admin/AllBranches/_footer.html', {
         "path": "../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
-    @@include('./Admin/AsArray/_scripts.html', {
+    @@include('./Admin/AllBranches/_scripts.html', {
     "path": "../../.."
     })
 
-    <script type="module" src="../../../Js/Admin/AsArray/Index/entryFile.js"></script>
+    <script type="module" src="../../../Js/Admin/AllBranches/AsArrayShowAll/entryFile.js"></script>
 </body>
 
 </html>
