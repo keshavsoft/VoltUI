@@ -19,7 +19,7 @@
 <html lang="en">
 
 <head>
-    @@include('./Admin/AllBranches/_head.html', {
+    @@include('./Admin/AsArray/_head.html', {
     "path": "../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
@@ -36,27 +36,27 @@
 <body>
 
 
-    @@include('./Admin/AllBranches/_nav.html', {
+    @@include('./Admin/AsArray/_nav.html', {
     "path": "../../.."
     })
 
-    @@include('./Admin/AllBranches/_sidenav.html', {
+    @@include('./Admin/AsArray/_sidenav.html', {
     "path": "../../..",
-    "page": "AsArrayShowAll",
+    "page": "AsArrayCount",
     "parentmenu":"AsArray"
     })
 
 
     <main class="content">
 
-        @@include('./Admin/AllBranches/_topbar.html', {
+        @@include('./Admin/AsArray/_topbar.html', {
         "path": "../../.."
         })
 
         <div class="py-4">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
-                    <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Status ShowAll</h3>
+                    <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif">AsArray Count</h3>
                     <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent mb-0">
                         <li class="breadcrumb-item">
                             <a href="#">
@@ -69,7 +69,7 @@
                             </a>
                         </li>
                         <li class="breadcrumb-item"><a href="#">AsArray</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Show All</li>
+                        <li class="breadcrumb-item active" aria-current="page">Count</li>
                         <!-- <li class="breadcrumb-item active" aria-current="page">ShowAll</li> -->
                     </ol>
                 </nav>
@@ -89,17 +89,17 @@
             </div>
         </div>
 
-        @@include('./Admin/AllBranches/_footer.html', {
+        @@include('./Admin/AsArray/_footer.html', {
         "path": "../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
-    @@include('./Admin/AllBranches/_scripts.html', {
+    @@include('./Admin/AsArray/_scripts.html', {
     "path": "../../.."
     })
 
-    <script type="module" src="../../../Js/Admin/AllBranches/AsArrayShowAll/entryFile.js"></script>
+    <script type="module" src="../../../Js/Admin/AsArray/AsArrayCount/entryFile.js"></script>
 </body>
 
 </html>
