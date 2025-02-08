@@ -141,6 +141,17 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="multi-level collapse @@if (context.parentmenu === 'AsArray') { show }" id="AsArray"
+            data-bs-parent="#accordionSidebar" role="list">
+            <ul class="flex-column nav">
+                <li class="nav-item @@if (context.page === 'AsArray') { active }">
+                    <a class="nav-link" href="@@path/pages/Admin/AsArray/AsArrayDelivery.html">
+                        <span class="sidebar-text">Delivery</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
             </li>
             
 
