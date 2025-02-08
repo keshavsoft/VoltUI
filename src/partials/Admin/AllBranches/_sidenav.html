@@ -108,6 +108,17 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="multi-level collapse @@if (context.parentmenu === 'AsArray') { show }" id="AsArray-Menu"
+                    data-bs-parent="#accordionSidebar" role="list">
+                    <ul class="flex-column nav">
+                        <li class="nav-item @@if (context.page === 'AsArrayCount') { active }">
+                            <a class="nav-link" href="@@path/pages/Admin/AllBranches/AsArrayCount.html">
+                                <span class="sidebar-text">Count</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             
             <li class="nav-item">
