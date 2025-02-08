@@ -18,33 +18,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    @@include('./Menu/_head.html', {
-    "path": "../",
-    "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
-    })
-</head>
+    <head>
+        @@include('./Admin/AllBranches/_head.html', {
+            "path": "../..",
+            "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
+            })
+            <style>
+                .small-icon {
+                    font-size: 0.75rem;
+                    margin-right: 7px;
+                    vertical-align: middle;
+                }
+            </style>
+    </head>
 
 <body>
 
-    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
-    @@if (environment === 'production') {
-    @@include('./_analytics_body.html')
-    }
-
-    @@include('./dashboard/_nav.html', {
-    "path": "../"
+    @@include('./Admin/AllBranches/_nav.html', {
+    "path": "../.."
     })
 
-    @@include('./Menu/_sidenav.html', {
-    "path": "../",
+    @@include('./Admin/AllBranches/_sidenav.html', {
+    "path": "../..",
     "page": "showall",
-    "parentmenu":"time"
+    "parentmenu":"Admin"
     })
 
     <main class="content">
 
-        @@include('./dashboard/_topbar.html', {
+        @@include('./Admin/AllBranches/_topbar.html', {
         "path": "../.."
         })
 
@@ -150,15 +152,15 @@
             </div>
         </div>
         
-        @@include('./dashboard/_footer.html', {
-        "path": "../..",
-        "classes": "bg-gray-800 text-white"
+        @@include('./Admin/AllBranches/_footer.html', {
+            "path": "../..",
+            "classes": "bg-gray-800 text-white"
+            })
+        </main>
+    
+        @@include('./Admin/AllBranches/_scripts.html', {
+        "path": "../.."
         })
-    </main>
-
-    @@include('./BSTable/_scripts.html', {
-    "path": "../"
-    })
 
     <script type="module" src="../../Js/BranchWise/Status/Show/entryFile.js"></script>
 </body>
