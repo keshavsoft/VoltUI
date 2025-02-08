@@ -90,7 +90,7 @@
                 <div class="multi-level collapse @@if (context.parentmenu === 'AsArray') { show }" id="AsArray-Menu"
                     data-bs-parent="#accordionSidebar" role="list">
                     <ul class="flex-column nav">
-                        <li class="nav-item @@if (context.page === 'AsArrayShowAll') { active }">
+                        <li class="nav-item @@if (context.page === 'AsArray') { active }">
                             <a class="nav-link" href="@@path/pages/Admin/AsArray/AsArrayShowAll.html">
                                 <span class="sidebar-text">Show All</span>
                             </a>
@@ -98,10 +98,10 @@
                     </ul>
                 </div>
 
-                <div class="multi-level collapse @@if (context.parentmenu === 'AsArray') { show }" id="AsArray-Menu"
+                <div class="multi-level collapse @@if (context.parentmenu === 'AsArray') { show }" id="AsArray"
                     data-bs-parent="#accordionSidebar" role="list">
                     <ul class="flex-column nav">
-                        <li class="nav-item @@if (context.page === 'AsArrayDetails') { active }">
+                        <li class="nav-item @@if (context.page === 'AsArray') { active }">
                             <a class="nav-link" href="@@path/pages/Admin/AsArray/AsArrayDetails.html">
                                 <span class="sidebar-text">Details</span>
                             </a>
@@ -109,12 +109,23 @@
                     </ul>
                 </div>
 
-                <div class="multi-level collapse @@if (context.parentmenu === 'AsArray') { show }" id="AsArray-Menu"
+                <div class="multi-level collapse @@if (context.parentmenu === 'AsArray') { show }" id="AsArray"
                     data-bs-parent="#accordionSidebar" role="list">
                     <ul class="flex-column nav">
-                        <li class="nav-item @@if (context.page === 'AsArrayCount') { active }">
+                        <li class="nav-item @@if (context.page === 'AsArray') { active }">
                             <a class="nav-link" href="@@path/pages/Admin/AsArray/AsArrayCount.html">
                                 <span class="sidebar-text">Count</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="multi-level collapse @@if (context.parentmenu === 'AsArray') { show }" id="AsArray"
+                    data-bs-parent="#accordionSidebar" role="list">
+                    <ul class="flex-column nav">
+                        <li class="nav-item @@if (context.page === 'AsArray') { active }">
+                            <a class="nav-link" href="@@path/pages/Admin/AsArray/AsArrayIsSettled.html">
+                                <span class="sidebar-text">Is Settled</span>
                             </a>
                         </li>
                     </ul>
