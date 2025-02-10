@@ -14,9 +14,36 @@
             "formatter": ""
         },
         {
-            "field": "timespan",
-            "title": "Time Span",
+            "field": "BranchName",
+            "title": "Branch Name",
+            "formatter": ""
+        },
+        {
+            "field": "OrderNumber",
+            "title": "Order Number",
+            "formatter": ""
+        },
+        {
+            "field": "CustomerName",
+            "title": "Customer Name",
+            "formatter": ""
+        },
+        {
+            "field": "Mobile",
+            "title": "Mobile",
+            "sortable": true
+        },
+        {
+            "field": "OrderDateWithTime",
+            "title": "OrderDateWithTime",
+            "formatter": ""
+        },
+        {
+            "field": "TimeSpan",
+            "title": "TimeSpan",
             "formatter": ""
         }
+        
+    
     ]
 }
