@@ -12,6 +12,11 @@
             "field": "KS-Serial",
             "title": "#",
             "formatter": ""
+        },
+        {
+            "field": "timespan",
+            "title": "Time Span",
+            "formatter": ""
         }
     ]
 }
