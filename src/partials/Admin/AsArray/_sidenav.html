@@ -154,6 +154,17 @@
             </div>
 
             <div class="multi-level collapse @@if (context.parentmenu === 'AsArray') { show }" id="AsArray"
+                data-bs-parent="#accordionSidebar" role="list">
+                <ul class="flex-column nav">
+                    <li class="nav-item @@if (context.page === 'AsArray') { active }">
+                        <a class="nav-link" href="@@path/pages/Admin/AsArray/AsArrayDateDesc.html">
+                            <span class="sidebar-text">Latest</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="multi-level collapse @@if (context.parentmenu === 'AsArray') { show }" id="AsArray"
             data-bs-parent="#accordionSidebar" role="list">
             <ul class="flex-column nav">
                 <li class="nav-item @@if (context.page === 'AsArray') { active }">
