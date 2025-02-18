@@ -12,6 +12,26 @@
             "field": "KS-Serial",
             "title": "#",
             "formatter": ""
+        },
+        {
+            "field":"BranchName",
+            "title":"BranchName"
+        },
+        {
+            "title":"Order #",
+            "field":"OrderNumber"
+        },
+        {
+            "title":"Mobile",
+            "field":"Mobile"
+        },
+        {
+            "title":"TimeSpan",
+            "formatter":"TimeSpan"
+        },
+        {
+            "title":"OrderDate",
+            "field":"OrderDate"
         }
     ]
 }
