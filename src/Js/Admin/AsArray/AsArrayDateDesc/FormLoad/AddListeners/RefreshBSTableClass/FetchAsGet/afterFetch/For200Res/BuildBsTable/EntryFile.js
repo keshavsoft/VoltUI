@@ -7,7 +7,7 @@ const StartFunc = ({ inResponseAsJson }) => {
     optionsJson.data = inResponseAsJson;
 
     ForColumns({ inColumns: optionsJson.columns });
-    jFLocalPrepareColumns({ inFirstRow: inResponseAsJson[0] });
+    // jFLocalPrepareColumns({ inFirstRow: inResponseAsJson[0] });
 
     $table.bootstrapTable(optionsJson);
 };
