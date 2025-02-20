@@ -1,8 +1,8 @@
 let StartFunc = ({ inFindColumn }) => {
-    inFindColumn.footerFormatter = pcsFormatter;
+    inFindColumn.footerFormatter = ItemsFormatter;
 };
 
-function pcsFormatter(data) {
+function ItemsFormatter(data) {
     var field = this.field
     var tPcs = data.map(function (row) {
         return +row.AggValues.ItemDetails.split(' / ')[1]
