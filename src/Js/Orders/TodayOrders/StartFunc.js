@@ -1,12 +1,10 @@
 import { StartFunc as StartFuncFormLoad } from "./FormLoad/StartFunc.js";
-import { StartFunc as AddListeners } from "./AddListeners/entryFile.js";
 
-const StartFunc = () => {
+const StartFunc = async () => {
+    StartFuncFormLoad();
     let jVarLocalFromAdmin = true;
-
     if (jVarLocalFromAdmin) {
-        StartFuncFormLoad();
-        AddListeners();
+        // StartFuncShowOnDom({}).then();
     };
 };
 
