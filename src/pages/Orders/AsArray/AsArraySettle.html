@@ -19,7 +19,7 @@
 <html lang="en">
 
 <head>
-    @@include('./Admin/AsArray/_head.html', {
+    @@include('./BSTable/_head.html', {
     "path": "../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
@@ -34,25 +34,21 @@
 </head>
 
 <body>
-
-
-    @@include('./Admin/AsArray/_nav.html', {
-    "path": "../../.."
-    })
-
-    @@include('./Admin/AsArray/_sidenav.html', {
-    "path": "../../..",
-    "page": "AsArrayCount",
-    "parentmenu":"AsArray"
-    })
-
+    
+        @@include('./dashboard/_nav.html', {
+        "path": "../../.."
+        })
+    
+        @@include('./Orders/AsArray/_sidenav.html', {
+        "path": "../../..",
+        "page": "tables"
+        })
 
     <main class="content">
 
-        @@include('./Admin/AsArray/_topbar.html', {
+        @@include('./dashboard/_topbar.html', {
         "path": "../../.."
         })
-
         <div class="py-4">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
@@ -89,13 +85,13 @@
             </div>
         </div>
 
-        @@include('./Admin/AsArray/_footer.html', {
+        @@include('./dashboard/_footer.html', {
         "path": "../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
-    @@include('./Admin/AsArray/_scripts.html', {
+    @@include('./BSTable/_scripts.html', {
     "path": "../../.."
     })
 

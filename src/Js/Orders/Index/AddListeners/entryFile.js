@@ -1,4 +1,4 @@
-import { StartFunc as BranchNameClass } from "./BranchNameClass/entryFile";
+import { StartFunc as BranchNameClass } from "./BranchNameClass/entryFile.js";
 
 const StartFunc = () => {
     BranchNameClass();

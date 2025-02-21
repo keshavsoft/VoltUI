@@ -19,10 +19,10 @@
 <html lang="en">
 
 <head>
-    @@include('./Admin/AsArray/_head.html', {
-        "path": "../../..",
-        "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
-        })
+    @@include('./BSTable/_head.html', {
+    "path": "../../..",
+    "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
+    })
 
     <style>
         .small-icon {
@@ -36,22 +36,20 @@
 <body>
 
 
-    @@include('./Admin/AsArray/_nav.html', {
-        "path": "../../.."
-        })
-    
-        @@include('./Admin/AsArray/_sidenav.html', {
-        "path": "../../..",
-        "page": "AsArrayCount",
-        "parentmenu":"AsArray"
-        })
-    
+    @@include('./dashboard/_nav.html', {
+    "path": "../../.."
+    })
+
+    @@include('./Orders/AsArray/_sidenav.html', {
+    "path": "../../..",
+    "page": "tables"
+    })
     
         <main class="content">
     
-            @@include('./Admin/AsArray/_topbar.html', {
-            "path": "../../.."
-            })
+        @@include('./dashboard/_topbar.html', {
+        "path": "../../.."
+        })
 
         <div class="py-4">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
@@ -89,13 +87,13 @@
             </div>
         </div>
 
-        @@include('./Admin/AsArray/_footer.html', {
-            "path": "../../..",
-            "classes": "bg-gray-800 text-white"
-            })
+        @@include('./dashboard/_footer.html', {
+        "path": "../../..",
+        "classes": "bg-gray-800 text-white"
+        })
         </main>
     
-        @@include('./Admin/AsArray/_scripts.html', {
+        @@include('./BSTable/_scripts.html', {
         "path": "../../.."
         })
 

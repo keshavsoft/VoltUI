@@ -20,9 +20,9 @@
 
 <head>
     @@include('./BSTable/_head.html', {
-        "path": "../..",
-        "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
-        })
+    "path": "../../..",
+    "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
+    })
 
     <style>
         .small-icon {
@@ -35,27 +35,22 @@
 
 <body>
 
-
-    @@if (environment === 'production') {
-        @@include('./_analytics_body.html')
-        }
-    
-        @@include('./dashboard/_nav.html', {
-        "path": "../../.."
-        })
-    
-        @@include('./Orders/_sidenav.html', {
-        "path": "../../..",
-        "page": "tables"
-        })
+    @@include('./dashboard/_nav.html', {
+    "path": "../../.."
+    })
     
 
+    @@include('./Orders/AsArray/_sidenav.html', {
+    "path": "../../..",
+    "page": "tables"
+    })
+    
 
     <main class="content">
 
         @@include('./dashboard/_topbar.html', {
-            "path": "../../.."
-            })    
+        "path": "../../.."
+        })    
 
         <div class="py-4">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
@@ -94,16 +89,17 @@
         </div>
 
         @@include('./dashboard/_footer.html', {
-            "path": "../../..",
-            "classes": "bg-gray-800 text-white"
+        "path": "../../..",
+        "classes": "bg-gray-800 text-white"
         })
     </main>
 
     @@include('./BSTable/_scripts.html', {
-        "path": "../../.."
-        })
+    "path": "../../.."
+    })
 
-    <script type="module" src="../../../Js/Orders/AsArray/AsArrayCount/entryFile.js"></script>
+    <!-- <script type="module" src="../../../></script> -->
+     <script type="module" src="../../../Js/Orders/AsArray/AsArrayCount/entryFile.js"></script>
 </body>
 
 </html>
