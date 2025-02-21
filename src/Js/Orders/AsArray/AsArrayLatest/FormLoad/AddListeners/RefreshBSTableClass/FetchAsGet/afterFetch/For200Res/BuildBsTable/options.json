@@ -27,7 +27,7 @@
         },
         {
             "title":"TimeSpan",
-            "formatter":"TimeSpan"
+            "field":"TimeSpan"
         },
         {
             "title":"OrderDate",
