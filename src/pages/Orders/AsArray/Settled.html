@@ -35,7 +35,7 @@
 
     @@include('./Orders/AsArray/_sidenav.html', {
     "path": "../../..",
-    "page": "SortByDateOldest",
+    "page": "Settled",
     "page_group": "SortByDate"
     })
 
@@ -48,7 +48,7 @@
         <div class="py-4">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
-                    <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Oldest</h3>
+                    <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Settled</h3>
                     <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent mb-0">
                         <li class="breadcrumb-item">
                             <a href="#">
@@ -61,8 +61,7 @@
                             </a>
                         </li>
                         <li class="breadcrumb-item"><a href="#">AsArray</a></li>
-                        <li class="breadcrumb-item"><a href="#">Sort by Date</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Oldest</li>
+                        <li class="breadcrumb-item active" aria-current="page">Settle</li>
                         <!-- <li class="breadcrumb-item active" aria-current="page">ShowAll</li> -->
                     </ol>
                 </nav>
@@ -74,12 +73,13 @@
             </div>
         </div>
 
-        <div class="card border-0 shadow mb-4">
-            <div class="card-body">
-                <table id="table">
-                </table>
+
+            <div class="card border-0 shadow mb-4">
+                <div class="card-body">
+                    <table id="table">
+                    </table>
+                </div>
             </div>
-        </div>
 
         @@include('./Orders/AsArray/_footer.html', {
         "path": "../../..",
@@ -95,7 +95,7 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.js"></script>
 
-    <script type="module" src="../../../Js/Orders/AsArray/SortByDateOldest/entryFile.js"></script>
+    <script type="module" src="../../../Js/Orders/AsArray/Settled/entryFile.js"></script>
 </body>
 
 </html>

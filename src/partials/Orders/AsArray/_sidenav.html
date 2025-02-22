@@ -34,27 +34,51 @@
             </div>
         </div>
         <ul class="nav flex-column pt-3 pt-md-0">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="@@path/index.html" class="nav-link d-flex align-items-center">
                     <span class="sidebar-icon">
                         <img src="@@path/assets/img/brand/light.svg" height="20" width="20" alt="Volt Logo">
                     </span>
                     <span class="mt-1 ms-1 sidebar-text">Volt Overview</span>
                 </a>
+            </li> -->
+            <li class="nav-item">
+                <a href="#" class="nav-link d-flex align-items-center">
+                    <span>
+                        <span class="sidebar-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-grid" viewBox="0 0 16 16">
+                                <path
+                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                            </svg>
+                        </span>
+                        <span class="sidebar-text">Home</span>
+                    </span>
+                </a>
             </li>
-            <li class="nav-item @@if (context.page === 'overview') { active }">
-                <a href="@@path/pages/dashboard/dashboard.html" class="nav-link">
+            <li class="nav-item">
+                <a href="../../Orders/index.html" class="nav-link d-flex align-items-center">
+                    <span>
+                        <span class="sidebar-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z" />
+                            </svg>
+                        </span>
+                        <span class="sidebar-text">Parent</span>
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item @@if (context.page === 'index') { active }">
+                <a href="@@path/pages/Orders/AsArray/index.html" class="nav-link">
                     <span class="sidebar-icon">
-                        <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                            <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                        </svg>
+                        <i class="bi bi-speedometer2 me-2" style="color: #ff5733;"></i>
                     </span>
                     <span class="sidebar-text">Dashboard</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <span
                     class="nav-link @@if (context.page_group !== 'components') { collapsed } d-flex justify-content-between align-items-center"
                     data-bs-toggle="collapse" data-bs-target="#submenu-components">
@@ -95,7 +119,7 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> -->
 
             <li class="nav-item">
                 <span
@@ -103,13 +127,7 @@
                     data-bs-toggle="collapse" data-bs-target="#submenu-Orders">
                     <span>
                         <span class="sidebar-icon">
-                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path>
-                                <path fill-rule="evenodd"
-                                    d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
+                            <i class="bi bi-sort-up-alt me-2" style="color: #17a2b8;"></i>
                         </span>
                         <span class="sidebar-text">Sort By Date</span>
                     </span>
@@ -125,27 +143,62 @@
                 <div class="multi-level collapse @@if (context.page_group === 'SortByDate') { show }" role="list"
                     id="submenu-Orders" aria-expanded="false">
                     <ul class="flex-column nav">
-                        <li class="nav-item @@if (context.page === 'index') { active }">
-                            <a class="nav-link" target="_blank"
-                                href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/">
+                        <li class="nav-item @@if (context.page === 'ShowAll') { active }">
+                            <a class="nav-link d-flex align-items-center" href="ShowAll.html">
+                                <i class="bi bi-list-ul me-3" style="color: #007bff;"></i>
                                 <span class="sidebar-text">ShowAll</span>
                             </a>
                         </li>
                         <li class="nav-item @@if (context.page === 'sortByDateLatest') { active }">
-                            <a class="nav-link" href="sortByDateLatest.html">
+                            <a class="nav-link d-flex align-items-center" href="sortByDateLatest.html">
+                                <i class="bi bi-calendar-date me-3" style="color: #28a745;"></i>
                                 <span class="sidebar-text">Latest</span>
                             </a>
                         </li>
                         <li class="nav-item @@if (context.page === 'SortByDateOldest') { active }">
-                            <a class="nav-link" href="SortByDateOldest.html">
+                            <a class="nav-link d-flex align-items-center" href="SortByDateOldest.html">
+                                <i class="bi bi-calendar2-week me-3" style="color: #ffc107;"></i>
                                 <span class="sidebar-text">Oldest</span>
                             </a>
                         </li>
+                        <li class="nav-item @@if (context.page === 'Count') { active }">
+                            <a class="nav-link d-flex align-items-center" href="Count.html">
+                                <i class="bi bi-hash me-3" style="color: #dc3545;"></i>
+                                <span class="sidebar-text">Count</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'Delivery') { active }">
+                            <a class="nav-link d-flex align-items-center" href="Delivery.html">
+                                <i class="bi bi-truck me-3" style="color: #17a2b8;"></i>
+                                <span class="sidebar-text">Delivery</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'Details') { active }">
+                            <a class="nav-link d-flex align-items-center" href="Details.html">
+                                <i class="bi bi-card-list me-3" style="color: #6f42c1;"></i>
+                                <span class="sidebar-text">Details</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'IsSettled') { active }">
+                            <a class="nav-link d-flex align-items-center" href="IsSettled.html">
+                                <i class="bi bi-check-circle me-3" style="color: #fd7e14;"></i>
+                                <span class="sidebar-text">IsSettled</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'Settled') { active }">
+                            <a class="nav-link d-flex align-items-center" href="Settled.html">
+                                <i class="bi bi-check2-square me-3" style="color: #20c997;"></i>
+                                <span class="sidebar-text">Settled</span>
+                            </a>
+                        </li>
                     </ul>
+                    
+                    
+                    
                 </div>
             </li>
 
-            <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
+            <!-- <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
             <li class="nav-item">
                 <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/"
                     target="_blank" class="nav-link d-flex align-items-center">
@@ -182,7 +235,7 @@
                     </span>
                     <span>Upgrade to Pro</span>
                 </a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </nav>
