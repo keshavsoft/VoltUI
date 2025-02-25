@@ -1,31 +1,26 @@
-let StartFunc = () => {
-    jfDateFunc();
-    let jVarLocalBranchId = 'BranchNameId';
-    let jVarlocalBranch = document.getElementById(jVarLocalBranchId);
-    let jVarLocalBranchName = localStorage.getItem("BranchName");
-    const modifiedBranch = jVarLocalBranchName.replace("BranOrders", "");
+const StartFunc = () => {
+    let jVarLocalBranchName = getUrlQueryParams({ inGetKey: "Branch" });
 
-    if (jVarlocalBranch === null === false) {
-        jVarlocalBranch.innerHTML = modifiedBranch;
+    if (jVarLocalBranchName === null === false ) {
+        let jVarLocalClubbedData = `${jVarLocalBranchName}`;
+        jFLocalBranchId(jVarLocalClubbedData);
     };
 };
-function jfDateFunc() {
-    const fromDateInput = document.getElementById("FromDateInputId");
-    const toDateInput = document.getElementById("ToDateInputId");
 
-    const today = new Date();
-    const yesterday = new Date(today);
-    yesterday.setDate(today.getDate() - 1);
+let jFLocalBranchId = (inValue) => {
+    let jVarLocalHtmlId = 'BranchId';
+    let jVarLocalBranch = document.getElementById(jVarLocalHtmlId);
 
-    const formatDate = (date) => {
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, "0");
-        const day = String(date.getDate()).padStart(2, "0");
-        return `${year}-${month}-${day}`;
+    if (jVarLocalBranch === null === false) {
+        jVarLocalBranch.innerHTML = inValue;
     };
-
-    fromDateInput.value = formatDate(today);
-    toDateInput.value = formatDate(today);
 };
 
-export { StartFunc }
+let getUrlQueryParams = ({ inGetKey }) => {
+    const queryString = window.location.search;
+    const parameters = new URLSearchParams(queryString);
+    const value = parameters.get(inGetKey);
+    return value;
+};
+
+export { StartFunc };
