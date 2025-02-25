@@ -1,12 +1,26 @@
-let StartFunc = () => {
-    let jVarLocalBranchId = 'BranchNameId';
-    let jVarlocalBranch = document.getElementById(jVarLocalBranchId);
-    let jVarLocalBranchName = localStorage.getItem("BranchName");
-    const modifiedBranch = jVarLocalBranchName.replace("BranOrders", "");
+const StartFunc = () => {
+    let jVarLocalBranchName = getUrlQueryParams({ inGetKey: "Branch" });
 
-    if (jVarlocalBranch === null === false) {
-        jVarlocalBranch.innerHTML = modifiedBranch;
+    if (jVarLocalBranchName === null === false ) {
+        let jVarLocalClubbedData = `${jVarLocalBranchName}`;
+        jFLocalBranchId(jVarLocalClubbedData);
     };
 };
 
-export { StartFunc }
+let jFLocalBranchId = (inValue) => {
+    let jVarLocalHtmlId = 'BranchId';
+    let jVarLocalBranch = document.getElementById(jVarLocalHtmlId);
+
+    if (jVarLocalBranch === null === false) {
+        jVarLocalBranch.innerHTML = inValue;
+    };
+};
+
+let getUrlQueryParams = ({ inGetKey }) => {
+    const queryString = window.location.search;
+    const parameters = new URLSearchParams(queryString);
+    const value = parameters.get(inGetKey);
+    return value;
+};
+
+export { StartFunc };

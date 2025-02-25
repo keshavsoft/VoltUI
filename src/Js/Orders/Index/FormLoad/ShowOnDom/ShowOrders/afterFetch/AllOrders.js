@@ -5,7 +5,7 @@ const StartFunc = (data) => {
         let clone = template.cloneNode(true);
         clone.querySelector('.BranchNameClass').innerHTML=element.Branch;
         clone.querySelector('.BranchOrderCountClass').innerHTML=element.TotalOrderCount;
-        // clone.querySelector('.todayOrderClass').href="../Orders/OrderDetails/todayOrders.html?Branch="+element.Branch;
+        clone.querySelector('.Allorders').href="../Orders/OrderDetails/totalOrders.html?Branch="+element.Branch;
         container.appendChild(clone);
     });
 };

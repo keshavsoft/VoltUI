@@ -6,12 +6,22 @@
     "detailView": true,
     "onClickRow": "",
     "onExpandRow": "",
+    "pagination": "true",
+    "pageList":"[10,25,50,100,all]",
     "icons": "",
     "columns": [
         {
             "field": "pk",
             "title": "Order#"
             
+        },
+        {
+            "field": "CustomerData.CustomerName",
+            "title": "Customer Name"
+        },
+        {
+            "field": "CustomerData.CustomerMobile",
+            "title": "Mobile"
         },
         {
             "field": "OrderData.Currentdateandtime",
