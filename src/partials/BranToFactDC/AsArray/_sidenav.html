@@ -57,7 +57,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="@@path/pages/index.html" class="nav-link d-flex align-items-center">
+                <a href="@@path/pages/BranToFactDC/Menu/index.html" class="nav-link d-flex align-items-center">
                     <span>
                         <span class="sidebar-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -81,7 +81,7 @@
           
             <li class="nav-item">
                 <span
-                    class="nav-link @@if (context.page_group !== 'Dcs') { collapsed } d-flex justify-content-between align-items-center"
+                    class="nav-link @@if (context.page_group !== 'Sort') { collapsed } d-flex justify-content-between align-items-center"
                     data-bs-toggle="collapse" data-bs-target="#submenu-Orders">
                     <span>
                         <span class="sidebar-icon">
@@ -98,13 +98,13 @@
                         </svg>
                     </span>
                 </span>
-                <div class="multi-level collapse @@if (context.page_group === 'Dcs') { show }" role="list"
+                <div class="multi-level collapse @@if (context.page_group === 'Sort') { show }" role="list"
                     id="submenu-Orders" aria-expanded="false">
                     <ul class="flex-column nav">
-                        <li class="nav-item @@if (context.page === 'AllDcs') { active }">
-                            <a class="nav-link d-flex align-items-center" href="./Dcs/AllDcs.html">
+                        <li class="nav-item @@if (context.page === 'sortLatest') { active }">
+                            <a class="nav-link d-flex align-items-center" href="sortLatest.html">
                                 <i class="bi bi-list-ul me-3" style="color: #007bff;"></i>
-                                <span class="sidebar-text">ShowAll</span>
+                                <span class="sidebar-text">Latest</span>
                             </a>
                         </li>
                     </ul>
