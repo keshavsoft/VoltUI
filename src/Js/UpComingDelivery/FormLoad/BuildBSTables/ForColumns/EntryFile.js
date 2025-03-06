@@ -11,6 +11,7 @@ import { StartFunc as StartFuncColumnLocation } from "./ColumnLocation/entryFile
 import { StartFunc as StartFuncColumnDeliveryDateTime } from "./ColumnDeliveryDateTime/entryFile.js";
 import { StartFunc as StartFuncColumnItemService } from "./ColumnItemService/entryFile.js";
 import { StartFunc as ColumnIsSettled } from "./ColumnIsSettled/entryFile.js";
+import { StartFunc as OrderData } from "./OrderData/entryFile.js";
 
 let StartFunc = ({ inColumns }) => {
     let LocalColumns = inColumns;
@@ -29,6 +30,11 @@ let StartFunc = ({ inColumns }) => {
     let LocalColumnDeliveryDateTime = LocalColumns.find(element => element.field === "DeliveryDateTime");
     let LocalColumnItemService = LocalColumns.find(element => element.field === "ItemService");
     let LocalColumnIsSettled = LocalColumns.find(element => element.field === "IsSettled");
+    let LocalColumnOrderDate = LocalColumns.find(element => element.field === "OrderData.Currentdateandtime");
+
+    if (LocalColumnOrderDate === undefined === false) {
+        OrderData({ inFindColumn: LocalColumnOrderDate });
+    };
 
     if (LocalColumnOperateFine === undefined === false) {
         ColumnOperate({ inFindColumn: LocalColumnOperateFine });
