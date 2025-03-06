@@ -1,0 +1,113 @@
+{
+    "toolbar": "#toolbar",
+    "idfield": "pk",
+    "pagination": "true",
+    "pageList":"[10,25,50,100,all]",
+    "pageSize":"5",
+    "showFooter": "true",
+    "data": [],
+    "onClickRow": "",
+    "columns": [
+        {
+            "field": "KS-Serial",
+            "title": "#",
+            "formatter": "jFLocalSerialColumn"
+        },
+        {
+            "field": "QrCodeId",
+            "title": "Qr"
+        },
+        {
+            "field": "OrderNumber",
+            "title": "Or_ID",
+            "filterControl": "select"
+        },
+        {
+            "field": "BranchName",
+            "title": "Branch"
+        },
+        {
+            "field": "ItemName",
+            "title": "Item"
+        },
+        {
+            "title": "TimeSpan",
+            "field": "TimeSpan"
+        }, 
+        {
+            "field": "BranchScan",
+            "title": "Branch"
+        },
+        {
+            "field": "EntryScan",
+            "title": "Entry"
+        }, 
+        {
+            "field": "EntryReturnScan",
+            "title": "Entry_C"
+        },
+        {
+            "field": "WashingScan",
+            "title": "Wash"
+        },
+        {
+            "field": "PressingScan",
+            "title": "Pro"
+        },
+        {
+            "field": "PressingRejectScan",
+            "title": "Pro_C"
+        },
+        {
+            "field": "PressingRewash",
+            "title": "Pro_REW"
+        },
+        {
+            "field": "CompletionScan",
+            "title": "Comp_Scan"
+        },
+        {
+            "field": "F_F_Entry_Return_Scan",
+            "title": "FFE_Scan"
+        },
+        {
+            "field": "F_F_Pressing_Return_Scan",
+            "title": "FFP_Scan"
+        },
+        {
+            "field": "F_F_Completion_Scan",
+            "title": "FFC_Scan"
+        },
+        {
+            "field": "To_Delivery_Scan",
+            "title": "Deliver"
+        },
+        {
+            "field": "Rate",
+            "title": "Rate",
+            "align":"right",
+            "footerFormatter": "",
+            "formatter":"symbolFormat"
+        },
+        {
+            "field": "OrderDateTime",
+            "title": "Order_Dt"
+        },
+        {
+            "field": "DeliveryDateTime",
+            "title": "DeliveryDt"
+        },
+        {
+            "field": "location",
+            "title": "Factory"
+        },
+        {
+            "field": "CustomerName",
+            "title": "Customer"
+        },
+        {
+            "field": "CustomerMobileNumber",
+            "title": "Mobile"
+        }
+    ]
+}
