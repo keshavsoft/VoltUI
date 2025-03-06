@@ -9,6 +9,10 @@
     "icons": "",
     "columns": [
         {
+            "field": "KS-Serial",
+            "title": "#"  
+        },
+        {
             "field": "pk",
             "title": "Order#"
             

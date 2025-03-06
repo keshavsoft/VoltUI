@@ -23,6 +23,140 @@
     "path": "../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
+    <style>
+        @media print {
+            * {
+                box-shadow: none !important;
+                text-shadow: none !important;
+            }
+
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .container {
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            #table {
+                width: 100% !important;
+                border-collapse: collapse;
+                margin: 0 auto;
+                page-break-inside: auto;
+                table-layout: fixed;
+                word-wrap: break-word;
+                overflow: hidden;
+            }
+
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                padding: 5px;
+                text-align: left;
+                word-break: break-word;
+                overflow: hidden;
+            }
+
+            thead {
+                display: table-header-group;
+            }
+
+            tr {
+                page-break-inside: avoid;
+            }
+
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+
+            table {
+                width: 100% !important;
+                table-layout: fixed !important;
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                font-size: 12px !important;
+                padding: 5px !important;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: center;
+                border: 1px solid black !important;
+            }
+
+            th:nth-child(1),
+            td:nth-child(1) {
+                display: none !important;
+            }
+
+            th:nth-child(2),
+            td:nth-child(2) {
+                width: 28px !important;
+            }
+
+            th:nth-child(3),
+            td:nth-child(3) {
+                width: 84px !important;
+            }
+
+            th:nth-child(5),
+            td:nth-child(5) {
+                width: 100px !important;
+            }
+
+            th:nth-child(6),
+            td:nth-child(6) {
+                width: 80px !important;
+            }
+
+            th:nth-child(7),
+            td:nth-child(7) {
+                width: 74px !important;
+            }
+
+            th:nth-child(8),
+            td:nth-child(8) {
+                width: 74px !important;
+            }
+
+            th:nth-child(9),
+            td:nth-child(9) {
+                width: 74px !important;
+            }
+
+            th:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(5)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(8)):not(:nth-child(9)),
+            td:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(5)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(8)):not(:nth-child(9)) {
+                width: auto !important;
+            }
+
+            th,
+            td,
+            .d-none,
+            .d-sm-table-cell {
+                display: table-cell !important;
+            }
+
+            .d-print-none,
+            .no-print {
+                display: none !important;
+            }
+
+            thead {
+                display: table-header-group !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -47,7 +181,7 @@
         "path": "../.."
         })
 
-        <div class="py-4">
+        <div class="py-4 d-print-none">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
                     <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif">AllOrdersWithQr</h3>
@@ -86,44 +220,50 @@
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col-lg-3 col-md-3">
-                              <div class="form-group"><label for="Branch" class="form-label">Select Branch</label> <select id="Branch"
-                                  class="form-control" name="Branch" required>
-                                  <option value="All">All</option>
-                                  <option value="KKD">KKD</option>
-                                  <option value="ANFO">ANFO</option>
-                                  <option value="CSO">CSO</option>
-                                  <option value="GD">GD</option>
-                                  <option value="GWK">GWK</option>
-                                  <option value="KPA">KPA</option>
-                                  <option value="LBC">LBC</option>
-                                  <option value="MSNvzm">MSNvzm</option>
-                                  <option value="MVP">MVP</option>
-                                  <option value="NGGOS">NGGOS</option>
-                                  <option value="PBS">PBS</option>
-                                  <option value="RandB">RandB</option>
-                                  <option value="SP">SP</option>
-                                  <option value="VUDA">VUDA</option>
-                                  <option value="VZM">VZM</option>
-                                  <option value="YD">YD</option>
-                                </select></div>
+                                <div class="form-group"><label for="Branch" class="form-label">Select Branch</label>
+                                    <select id="Branch" class="form-control" name="Branch" required>
+                                        <option value="All">All</option>
+                                        <option value="KKD">KKD</option>
+                                        <option value="ANFO">ANFO</option>
+                                        <option value="CSO">CSO</option>
+                                        <option value="GD">GD</option>
+                                        <option value="GWK">GWK</option>
+                                        <option value="KPA">KPA</option>
+                                        <option value="LBC">LBC</option>
+                                        <option value="MSNvzm">MSNvzm</option>
+                                        <option value="MVP">MVP</option>
+                                        <option value="NGGOS">NGGOS</option>
+                                        <option value="PBS">PBS</option>
+                                        <option value="RandB">RandB</option>
+                                        <option value="SP">SP</option>
+                                        <option value="VUDA">VUDA</option>
+                                        <option value="VZM">VZM</option>
+                                        <option value="YD">YD</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-lg-4 col-md-4">
-                              <div class="form-group"><label for="FromDateInputId" class="form-label">From Date</label> <input
-                                  id="FromDateInputId" type="date" class="form-control"></div>
+                                <div class="form-group"><label for="FromDateInputId" class="form-label">From
+                                        Date</label> <input id="FromDateInputId" type="date" class="form-control"></div>
                             </div>
                             <div class="col-lg-4 col-md-4">
-                              <div class="form-group"><label for="ToDateInputId" class="form-label">To Date</label> <input id="ToDateInputId"
-                                  type="date" class="form-control"></div>
+                                <div class="form-group"><label for="ToDateInputId" class="form-label">To Date</label>
+                                    <input id="ToDateInputId" type="date" class="form-control">
+                                </div>
                             </div>
                             <div class="col-lg-1 col-md-2 d-flex align-items-end">
-                              <button class="ShowButtonClass btn btn-primary" style="margin-top: 1.75rem !important;"><i class="bi bi-search"></i></button></div>
-                          </div>
+                                <button class="ShowButtonClass btn btn-primary"
+                                    style="margin-top: 1.75rem !important;"><i class="bi bi-search"></i></button>
+                            </div>
+                        </div>
                         <div class="spinner-border" id="SpinnerId" role="status">
                             <span class="visually-hidden">Loading...</span>
 
                         </div>
-                        <table id="table">
-                        </table>
+                        <div class="container text-start">
+                            <table id="table" class="table">
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
