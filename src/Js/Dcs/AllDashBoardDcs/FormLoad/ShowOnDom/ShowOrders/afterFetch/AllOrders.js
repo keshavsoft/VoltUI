@@ -4,8 +4,8 @@ const StartFunc = (data) => {
     data.forEach(element => {
         let clone = template.cloneNode(true);
         clone.querySelector('.BranchNameClass').innerHTML=element.BranchName;
-        clone.querySelector('.BranchOrderCountClass').innerHTML=element.DcCount;
-        clone.querySelector('.Allorders').href="../Dcs/AllDashboardDcs.html?Branch="+element.BranchName;
+        clone.querySelector('.BranchOrderCountClass').innerHTML=element.QrCount;
+        clone.querySelector('.Allorders').href="../BranchWise/AllDashBoardQrCodes.html?Branch="+element.BranchName;
         container.appendChild(clone);
     });
 };
