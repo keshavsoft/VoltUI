@@ -2,7 +2,7 @@ import UrlJson from "../../../Config.json" with { type: "json" };
 
 let StartFunc = async () => {
     let LocalroutePath = UrlJson.routePath;
-    let jVarLocalFactoryName = localStorage.getItem("FactoryName")
+    let jVarLocalFactoryName =  getUrlQueryParams({ inGetKey: "FactoryName" });
     let jVarLocalVoucherRef = getUrlQueryParams({ inGetKey: "VoucherRef" });
 
     let jVarLocalFetchUrl = `${LocalroutePath}/${jVarLocalVoucherRef}/${jVarLocalFactoryName}`;
