@@ -48,7 +48,7 @@
             "formatter": ""
         },
         {
-            "title": "F_ScanPending",
+            "title": "F_Pending",
             "field": "pending",
             "footerFormatter": "",
             "formatter": ""
