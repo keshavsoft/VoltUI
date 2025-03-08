@@ -6,7 +6,7 @@ let StartFunc = ({ inFindColumn }) => {
 let jVarLocalFormatterFunc = (value, row, index) => {
     if (row.pending !== 0) {
         return [
-            `<a class="like btn btn-danger rounded-circle d-flex justify-content-center align-items-center" style="width: 32px; height: 32px;" href="./AllFactoryPending.html?VoucherRef=${row.pk}" title="Show">`,
+            `<a class="like btn btn-danger rounded-circle d-flex justify-content-center align-items-center" style="width: 32px; height: 32px;" href="./AllFactoryPending.html?VoucherRef=${row.pk}&FactoryName=${row.Factory}" title="Show">`,
             ' ',
             row.pending,
             '</a>',
