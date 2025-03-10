@@ -1,0 +1,174 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./Users/Customers/_head.html', {
+    "path": "../..",
+    "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
+    })
+    <link rel="stylesheet" href="../../Js/BranchWise/Dashboard/Index/Css/Styles.css">
+</head>
+
+<body>
+
+    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+    @@if (environment === 'production') {
+    @@include('./_analytics_body.html')
+    }
+
+    @@include('./Users/Customers/_nav.html', {
+    "path": "../.."
+    })
+
+    @@include('./Users/Customers/_sidenav.html', {
+    "path": "../..",
+    "page": "Orderindex"
+    })
+
+    <main class="content">
+
+        @@include('./Users/Customers/_topbar.html', {
+        "path": "../.."
+        })
+
+        <div class="py-4">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+                    <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Dashboard</h3>
+                    <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent mb-0">
+                        <li class="breadcrumb-item" active>
+                            <a href="#">
+                                <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item"><a href="#">Users</a></li>
+                        <!-- <li class="breadcrumb-item"><a href="#">Dashboard</a></li> -->
+                    </ol>
+                </nav>
+
+                <a id="RefreshATagId" href="#" class="btn btn-outline-gray-600 d-inline-flex align-items-center RefreshBSTableClass">
+                    <i class="bi bi-bootstrap-reboot me-2"></i> Refresh</a>
+
+                <button id="LoadingButtonId" class="btn btn-primary d-none" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                    <span role="status">Loading...</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row d-flex flex-wrap justify-content-evenly align-items-center">
+            <div class="col-6 col-sm-6 col-xl-6 mb-4" style="flex: 1; padding: 20px;">
+              <h3 style="margin-left: 10rem; margin-bottom: 1rem;">Branch</h3>
+              <div id="TodayContainerId"></div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-6 mb-4" style="flex: 1; padding: 20px;">
+              <h3 style="margin-left: 5rem; margin-bottom: 1rem;">Factory</h3>
+              <div id="AllContainerId"></div>
+            </div>
+          </div>
+
+        @@include('./Users/Customers/_footer.html', {
+        "path": "../..",
+        "classes": "bg-gray-800 text-white"
+        })
+    </main>
+
+    <template id="datatemplate">
+        <a class="todayOrderClass d-block text-decoration-none" href="#">
+            <div class="card border-0 shadow mb-3 ms" style="width: 70%; margin-left: 6rem;">
+                <div class="card-body">
+                    <div class="row d-block d-xl-flex align-items-center">
+                        <div
+                            class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="icon-shape icon-shape-secondary rounded me-4 me-sm-0"
+                                style="background-color: rgba(16, 250, 160, 0.3);">
+                                <svg class="icon" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="d-sm-none">
+                                <h2 class="h5"><span>BranchWi</span></h2>
+                                <h3 class="fw-extrabold mb-1">345,678</h3>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-7 px-xl-0">
+                            <div class="d-none d-sm-block">
+                                <h2 class="h6 text-gray-400 mb-0"><span class="BranchNameClass">BranchWise</span></h2>
+                                <h3 class="fw-extrabold mb-2"><span class="BranchOrderCountClass">345k</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </template>
+
+    <template id="AllOrderstemplate">
+        <a class="Allorders d-block text-decoration-none" href="">
+            <div class="card border-0 shadow mb-3" style="width: 70%;">
+                <div class="card-body">
+                    <div class="row d-block d-xl-flex align-items-center">
+                        <div
+                            class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="icon-shape icon-shape-secondary rounded me-4 me-sm-0"
+                                style="background-color: rgba(181, 236, 252, 0.4);">
+                                <svg fill="#ffbc05" width="64px" height="64px" viewBox="0 0 100 100"
+                                    xmlns="http://www.w3.org/2000/svg" stroke="#ffbc05">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M47.44 61.66a1 1 0 0 1 1 .91v14.37a3.06 3.06 0 0 1-2.87 3H25.08a3.06 3.06 0 0 1-3-2.88V62.82a1 1 0 0 1 .91-1h24.5zm29.51 0a1 1 0 0 1 1 .91v14.37a3.06 3.06 0 0 1-2.87 3H54.6a3.06 3.06 0 0 1-3-2.88V62.82a1 1 0 0 1 .91-1h24.5zM39.59 65.89l-.09.11-5.82 6.32-2.63-2.55a.77.77 0 0 0-1-.08l-.09.08-1.09 1a.62.62 0 0 0-.07.9l.07.08 3.73 3.54a1.56 1.56 0 0 0 1.08.45 1.43 1.43 0 0 0 1.09-.45l3.14-3.32.63-.67 3.14-3.31a.78.78 0 0 0 .06-.9l-.06-.08-1.09-1a.76.76 0 0 0-1-.12zm29.51 0l-.1.11-5.82 6.32-2.64-2.55a.75.75 0 0 0-1-.08l-.09.08-1.09 1a.62.62 0 0 0-.07.9l.07.08 3.73 3.54a1.54 1.54 0 0 0 1.08.45 1.43 1.43 0 0 0 1.09-.45l3.14-3.32.63-.67 3.14-3.31a.78.78 0 0 0 .06-.9l-.06-.08-1.07-1.01a.76.76 0 0 0-1-.11zm-23.43-14.41a3 3 0 0 1 2.85 2.87v3.24a1 1 0 0 1-.84 1H21.1a1 1 0 0 1-.94-.9v-3.16a3 3 0 0 1 2.69-3.05h23zm31.48 0a3 3 0 0 1 2.85 2.87v3.24a1 1 0 0 1-.84 1H67.61a1 1 0 0 1-1-.9v-3.16a3 3 0 0 1 2.68-3.05h23zm-15-21.29a1 1 0 0 1 1 .91v14.37a3.06 3.06 0 0 1-2.87 3.05H59.71a3.06 3.06 0 0 1-3.05-2.87V30.71a1 1 0 0 1 .9-1h24.51zm-7.85 4.22l-.09.08-5.82 6.32-2.59-2.56a.76.76 0 0 0-1-.07l-.09.07-1.08 1a.61.61 0 0 0-.07.9l.07.08 3.72 3.53a1.56 1.56 0 0 0 1.09.45 1.43 1.43 0 0 0 1.08-.45l3.14-3.31.64-.67 3.13-3.32a.78.78 0 0 0 .06-.9l-.06-.07-1.08-1a.77.77 0 0 0-1-.08zm7.9-14.41a3.06 3.06 0 0 1 3 2.88v3.23a1 1 0 0 1-.91 1H45.4a1 1 0 0 1-1-.91V22.3a3.06 3.06 0 0 1 2.87-3h24.56z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="d-sm-none">
+                                <h2 class="h5"><span>BranchWi</span></h2>
+                                <h3 class="fw-extrabold mb-1">345,678</h3>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-7 px-xl-0">
+                            <div class="d-none d-sm-block">
+                                <h2 class="h6 text-gray-400 mb-0"><span class="BranchNameClass">BranchWise</span></h2>
+                                <h3 class="fw-extrabold mb-2"><span class="BranchOrderCountClass">345k</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </template>
+    @@include('./Users/Customers/_scripts.html', {
+    "path": "../.."
+    })
+    <script type="module" src="../../Js/BranchWise/Dashboard/Index/StartFunc.js"></script>
+</body>
+
+</html>
