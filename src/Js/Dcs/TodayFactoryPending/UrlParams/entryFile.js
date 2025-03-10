@@ -1,5 +1,5 @@
 const StartFunc = () => {
-    let jVarLocalBranchName = getUrlQueryParams({ inGetKey: "Branch" });
+    let jVarLocalBranchName = getUrlQueryParams({ inGetKey: "FactoryName" });
 
     if (jVarLocalBranchName === null === false ) {
         let jVarLocalClubbedData = `${jVarLocalBranchName}`;

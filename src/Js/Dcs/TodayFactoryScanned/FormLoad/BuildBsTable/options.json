@@ -19,7 +19,7 @@
         },
         {
             "field": "QrCodeId",
-            "title": "QrCode"
+            "title": "Qr"
         },
         {
             "field": "OrderNumber",
@@ -27,22 +27,22 @@
             "filtercontrol": "select"
         },
         {
-            "title": "OrderDate",
+            "title": "Order_Date",
             "field": "OrderDate",
             "filtercontrol": "select"
         },
         {
-            "title": "DeliveryDate",
+            "title": "Delivery_Date",
             "field": "DeliveryDate",
             "filtercontrol": "select"
         },
         {
             "field": "ItemName",
-            "title": "ItemName",
+            "title": "Items",
             "filtercontrol": "select"
         },
         {
-            "title": "Time Span",
+            "title": "T_Span",
             "field": "TimeSpan"
         }
     ]
