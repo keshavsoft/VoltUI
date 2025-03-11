@@ -93,28 +93,44 @@
               </div>
             </div>
 
-            <div class="col-12">
+            <div class="col-12 position-relative">
               <label for="yourPassword" class="form-label">Password</label>
-              <input type="password" name="password" class="form-control" id="yourPassword" required>
+              <div class="input-group">
+                <input type="password" name="password" class="form-control" id="yourPassword" required>
+                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
               <div class="invalid-feedback">Please enter your password!</div>
             </div>
 
             <div class="col-12">
               <label for="UserMobile" class="form-label">User Mobile</label>
-              <input type="number" name="UserMobile" min="1" class="form-control" id="UserMobile" required>
-              <div class="invalid-feedback">Please enter your UserMobile!</div>
+              <input type="number" name="Mobile" min="1" class="form-control" id="UserMobile" required oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)">
+              <div class="invalid-feedback" id="MobileClass">Please enter your UserMobile!</div>
             </div>
 
-            <div class="col-12">
-              <label for="yourBranch" class="form-label">Branch</label>
+            <!-- <div class="col-12">
+              <label for="yourBranch" class="form-label">Factory</label>
               <input type="text" name="yourBranch" class="form-control" id="yourBranch" required>
               <div class="invalid-feedback">Please enter a valid Branch !</div>
+            </div> -->
+
+            <div class="col-12">
+              <label for="yourBranch" class="form-label">Factory</label>
+              <select name="yourBranch" class="form-control" id="yourBranch" required>
+                <option value="" selected disabled>Select a Factory</option>
+                <option value="Vizag">Vizag</option>
+                <option value="GD">GD</option>
+                <option value="VZM">VZM</option>
+              </select>
+              <div class="invalid-feedback">Please select a valid Factory!</div>
             </div>
 
             <div class="col-12">
               <label for="yourMobile" class="form-label">Branch Mobile</label>
-              <input type="number" min="1" name="yourMobile" class="form-control" id="yourMobile" required>
-              <div class="invalid-feedback">Please enter a valid Branch Mobile !</div>
+              <input type="number" min="1" name="Mobile" class="form-control" id="yourMobile" required oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)">
+              <div class="invalid-feedback" id="MobileClass">Please enter a valid Branch Mobile !</div>
             </div>
 
             <div class="col-12">
