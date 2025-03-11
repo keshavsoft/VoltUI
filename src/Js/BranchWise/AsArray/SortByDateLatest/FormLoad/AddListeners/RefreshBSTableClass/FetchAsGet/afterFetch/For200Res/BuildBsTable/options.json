@@ -14,7 +14,7 @@
             "formatter": ""
         },
         {
-            "field":"BranchName",
+            "field":"BookingData.OrderData.BranchName",
             "title":"BranchName"
         },
         {
@@ -23,15 +23,15 @@
         },
         {
             "title":"Mobile",
-            "field":"Mobile"
+            "field":"BookingData.CustomerData.CustomerMobile"
         },
         {
             "title":"TimeSpan",
-            "field":"TimeSpan"
+            "field":"BookingData.DateTime"
         },
         {
             "title":"OrderDate",
-            "field":"OrderDate"
+            "field":"BookingData.OrderData.Currentdateandtime"
         }
     ]
 }
