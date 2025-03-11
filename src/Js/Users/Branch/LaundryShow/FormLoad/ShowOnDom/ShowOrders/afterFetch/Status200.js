@@ -1,11 +1,10 @@
-let StartFunc = ({inData}) => {
-    console.log(inData);
-    
+let StartFunc = ({ inData }) => {
+    // console.log("inData",inData);
+
     var $table = $('#table');
-    // let jVarLocalSortByDate = jFLocalSortByDate();
-    // let jVarLocalSortByAccountName = jVarLocalSortByDate.sort((a, b) => a.value - b.value);
-    
-    $table.bootstrapTable("load", inData);
+    let jVarLocalModifiedData= inData.filter(e => e.Branch);
+
+    $table.bootstrapTable("load", jVarLocalModifiedData);
 };
 
 const jFLocalSortByDate = () => {
