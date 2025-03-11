@@ -12,6 +12,10 @@
             "field": "KS-Serial",
             "title": "#",
             "formatter": ""
+        },
+        {
+            "field": "BookingData.CustomerData.CustomerName",
+            "title": "Customer Name"
         }
     ]
 }
