@@ -71,51 +71,24 @@
                 </a>
             </li>
             
-
-            <li class="nav-item">
-                <a href="./Users/index.html" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <i class="bi bi-people-fill" style="color: #007bff;"></i> <!-- Blue -->
-                    </span>
-                    <span class="mt-1 ms-1 sidebar-text">Users</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a href="./BranchWise/index.html" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <i class="bi bi-shop-window" style="color: #007bff;"></i> <!-- Blue -->
-                    </span>
-                    <span class="mt-1 ms-1 sidebar-text">QR Codes</span>
-                </a>
-            </li>
-            
-            <li class="nav-item">
-                <a href="./Orders/index.html" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <i class="bi bi-border-style" style="color: #28a745;"></i> <!-- Green -->
-                    </span>
-                    <span class="mt-1 ms-1 sidebar-text">Orders</span>
-                </a>
-            </li>
-            
-            <li class="nav-item">
-                <a href="./Dcs/index.html" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <i class="bi bi-diagram-3" style="color: #dc3545;"></i> <!-- Red -->
-                    </span>
-                    <span class="mt-1 ms-1 sidebar-text">Dcs</span>
-                </a>
-            </li>
             
             <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
 
-            <li class="nav-item">
-                <a href="./Masters" class="nav-link d-flex align-items-center">
+            <li class="nav-item @@if (context.page === 'createNew') { active }">
+                <a href="createNew.html" class="nav-link d-flex align-items-center">
                     <span class="sidebar-icon">
                         <i class="bi bi-diagram-3" style="color: #dc3545;"></i> <!-- Red -->
                     </span>
-                    <span class="mt-1 ms-1 sidebar-text">Masters</span>
+                    <span class="mt-1 ms-1 sidebar-text">Create New</span>
+                </a>
+            </li>
+
+            <li class="nav-item @@if (context.page === 'createWithMandate') { active }">
+                <a href="createWithMandate.html" class="nav-link d-flex align-items-center">
+                    <span class="sidebar-icon">
+                        <i class="bi bi-diagram-3" style="color: #dc3545;"></i> <!-- Red -->
+                    </span>
+                    <span class="mt-1 ms-1 sidebar-text">Create With Mandate</span>
                 </a>
             </li>
         </ul>
