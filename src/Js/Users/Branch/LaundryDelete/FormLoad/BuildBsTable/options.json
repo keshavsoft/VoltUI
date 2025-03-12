@@ -12,7 +12,7 @@
         },
         {
             "field": "UserName",
-            "title": "User Name"
+            "title": "User_Name"
         },
         {
             "field": "Password",
@@ -20,7 +20,7 @@
         },
         {
             "field": "UserMobile",
-            "title": "User Mobile"
+            "title": "User_Mobile"
         },
         {
             "field": "Branch",
@@ -28,7 +28,7 @@
         },
         {
             "field": "BranchMobile",
-            "title": "Branch Mobile"
+            "title": "Branch_Mobile"
         },
         {
             "field": "isAdminValidated",
