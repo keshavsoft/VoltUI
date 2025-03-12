@@ -12,7 +12,7 @@ const jFLocalAddToItems = ({ inBranchName }) => {
 };
 
 const GetFetch = async () => {
-    let LocalUrl = "/Custom/Cleaning/Dashboard/Admin/Reports/Common/BranchName";
+    let LocalUrl = "/Custom/Cleaning/Dashboard/Admin/Reports/Pos/Common/BranchName";
     let response = await fetch(LocalUrl);
     let Data = await response.json();
     return Data;
