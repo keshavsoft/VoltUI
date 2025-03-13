@@ -1,0 +1,210 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./OrderChecking/_head.html', {
+    "path": "../..",
+    "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
+    })
+    <!-- <link rel="stylesheet" href="../../Js/Dcs/Index/Css/Styles.css"> -->
+</head>
+
+<body>
+
+    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+    @@if (environment === 'production') {
+    @@include('./_analytics_body.html')
+    }
+
+    @@include('./OrderChecking/_nav.html', {
+    "path": "../.."
+    })
+
+    @@include('./OrderChecking/_sidenav.html', {
+    "path": "../..",
+    "page": "CheckOrderQrs",
+    "page_group":"OrderChecking"
+    })
+
+    <main class="content">
+
+        @@include('./OrderChecking/_topbar.html', {
+        "path": "../.."
+        })
+
+        <main id="" class="main container">
+            <!-- <h1>Branch</h1> -->
+            <div class="card mb-3 mt-5">
+                <div class="card-header bg-transparent">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group mb-3">
+                                <input type="number" id="OrderId" class="form-control" placeholder="Order Number"
+                                    autofocus aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button"
+                                    id="button-addon2">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-none CustomerDetailsClass">
+                        <div class="col-md-4">
+                            <label for="validationCustom01" class="form-label">Customer name</label>
+                            <input type="text" id="CustomerNameId" class="form-control" id="validationCustom01"
+                                disabled>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom01" class="form-label">Mobile</label>
+                            <input type="text" id="CustomerMobileId" class="form-control" id="validationCustom01"
+                                disabled>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body ">
+                        <table id="table">
+                            <thead>
+                                <tr>
+                                    <th data-formatter="jFGlobalSerialColumn">#</th>
+                                </tr>
+
+                            </thead>
+                        </table>
+                    </div>
+                    <!-- <div class="card-footer bg-transparent">Footer</div> -->
+                </div>
+
+
+
+                <div class="spinner-border" id="SpinnerId" role="status" style="display: none;">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+
+
+        </main>
+
+        @@include('./OrderChecking/_footer.html', {
+        "path": "../..",
+        "classes": "bg-gray-800 text-white"
+        })
+    </main>
+
+    <template id="datatemplate">
+        <a class="todayOrderClass d-block text-decoration-none" href="#">
+            <div class="modal fade" id="LoginModalId" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <form class="login-form">
+                                <h2 class="text-center mb-4">Login</h2>
+
+                                <div class="mb-3">
+                                    <input type="text" id="UsernameId" class="form-control" placeholder="User name"
+                                        autofocus>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" id="PasswordId" class="form-control" id="password"
+                                        placeholder="Password">
+                                </div>
+                                <div class="mb-3 text-center mt-3">
+                                    <button type="button" id="LoginButtonId"
+                                        class="btn btn-primary btn-block w-100">Login</button>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="#">Forgot password?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </template>
+
+    <template id="AllOrderstemplate">
+        <a class="Allorders d-block text-decoration-none" href="">
+            <div class="card border-0 shadow mb-3" style="width: 70%;">
+                <div class="card-body">
+                    <div class="row d-block d-xl-flex align-items-center">
+                        <div
+                            class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="icon-shape icon-shape-secondary rounded me-4 me-sm-0"
+                                style="background-color: rgba(181, 236, 252, 0.4);">
+                                <svg fill="#ffbc05" width="64px" height="64px" viewBox="0 0 100 100"
+                                    xmlns="http://www.w3.org/2000/svg" stroke="#ffbc05">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M47.44 61.66a1 1 0 0 1 1 .91v14.37a3.06 3.06 0 0 1-2.87 3H25.08a3.06 3.06 0 0 1-3-2.88V62.82a1 1 0 0 1 .91-1h24.5zm29.51 0a1 1 0 0 1 1 .91v14.37a3.06 3.06 0 0 1-2.87 3H54.6a3.06 3.06 0 0 1-3-2.88V62.82a1 1 0 0 1 .91-1h24.5zM39.59 65.89l-.09.11-5.82 6.32-2.63-2.55a.77.77 0 0 0-1-.08l-.09.08-1.09 1a.62.62 0 0 0-.07.9l.07.08 3.73 3.54a1.56 1.56 0 0 0 1.08.45 1.43 1.43 0 0 0 1.09-.45l3.14-3.32.63-.67 3.14-3.31a.78.78 0 0 0 .06-.9l-.06-.08-1.09-1a.76.76 0 0 0-1-.12zm29.51 0l-.1.11-5.82 6.32-2.64-2.55a.75.75 0 0 0-1-.08l-.09.08-1.09 1a.62.62 0 0 0-.07.9l.07.08 3.73 3.54a1.54 1.54 0 0 0 1.08.45 1.43 1.43 0 0 0 1.09-.45l3.14-3.32.63-.67 3.14-3.31a.78.78 0 0 0 .06-.9l-.06-.08-1.07-1.01a.76.76 0 0 0-1-.11zm-23.43-14.41a3 3 0 0 1 2.85 2.87v3.24a1 1 0 0 1-.84 1H21.1a1 1 0 0 1-.94-.9v-3.16a3 3 0 0 1 2.69-3.05h23zm31.48 0a3 3 0 0 1 2.85 2.87v3.24a1 1 0 0 1-.84 1H67.61a1 1 0 0 1-1-.9v-3.16a3 3 0 0 1 2.68-3.05h23zm-15-21.29a1 1 0 0 1 1 .91v14.37a3.06 3.06 0 0 1-2.87 3.05H59.71a3.06 3.06 0 0 1-3.05-2.87V30.71a1 1 0 0 1 .9-1h24.51zm-7.85 4.22l-.09.08-5.82 6.32-2.59-2.56a.76.76 0 0 0-1-.07l-.09.07-1.08 1a.61.61 0 0 0-.07.9l.07.08 3.72 3.53a1.56 1.56 0 0 0 1.09.45 1.43 1.43 0 0 0 1.08-.45l3.14-3.31.64-.67 3.13-3.32a.78.78 0 0 0 .06-.9l-.06-.07-1.08-1a.77.77 0 0 0-1-.08zm7.9-14.41a3.06 3.06 0 0 1 3 2.88v3.23a1 1 0 0 1-.91 1H45.4a1 1 0 0 1-1-.91V22.3a3.06 3.06 0 0 1 2.87-3h24.56z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="d-sm-none">
+                                <h2 class="h5"><span>BranchWi</span></h2>
+                                <h3 class="fw-extrabold mb-1">345,678</h3>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-7 px-xl-0">
+                            <div class="d-none d-sm-block">
+                                <h2 class="h6 text-gray-400 mb-0"><span class="BranchNameClass">BranchWise</span></h2>
+                                <h3 class="fw-extrabold mb-2"><span class="BranchOrderCountClass">345k</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </template>
+    @@include('./OrderChecking/_scripts.html', {
+    "path": "../.."
+    })
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.js"></script>
+    <script>
+        function rowStyle(row, index) {
+            if (row.EntryReturn || row.ProcessReturn) {
+                return { css: { "background-color": "lightcoral" } };
+            };
+            return {};
+        };
+    </script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/static/NiceAdmin/js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../../Js/OrderChecking/CheckOrderQrs/StartFunc.js"></script>
+
+</body>
+
+</html>
