@@ -1,11 +1,15 @@
 let StartFunc = (inData) => {
-    console.log("inData:", inData);
+    // console.log("inData:", inData);
     LocalUnDisableFunc()
     jFLocalToInputCustomerNameId(inData[0].CustomerName)
     jFLocalToInputCustomerMobileId(inData[0].CustomerMobile)
-    var $table = $('#table')
+    var $table = $('#table');
+    if (inData.length === 0) {
+        $table.bootstrapTable('refreshOptions', { data: [] }); // Clears the table
+    } else {
+        $table.bootstrapTable("load", inData);
+    }
 
-    $table.bootstrapTable("load", inData);
 };
 
 let jFLocalToInputCustomerNameId = (inValue) => {

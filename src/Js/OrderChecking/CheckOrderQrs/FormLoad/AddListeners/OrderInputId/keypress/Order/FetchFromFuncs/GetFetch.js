@@ -2,7 +2,7 @@ import ConfigJson from "../../../../../../Config.json" with { type: "json" };
 
 let StartFunc = async () => {
     let LocalOrderId = jFLocalOrderId();
-    let jVarLocalBranchName = localStorage.getItem("BranchName");
+    let jVarLocalBranchName = jFLocalBranch();
 
     let jVarLocalFetchUrl = `/Custom/Cleaning/Branch/Order/Delivery/OrderScan/CheckStatus/${LocalOrderId}/${jVarLocalBranchName}`;
     let response = await fetch(jVarLocalFetchUrl);
@@ -19,5 +19,13 @@ let jFLocalOrderId = () => {
     };
 };
 
+let jFLocalBranch = () => {
+    let jVarLocalBranch = 'Branch'
+    let jVarLocalHtmlId = document.getElementById(jVarLocalBranch);
+
+    if (jVarLocalHtmlId === null === false) {
+        return jVarLocalHtmlId.value.trim();
+    };
+};
 export { StartFunc };
 
