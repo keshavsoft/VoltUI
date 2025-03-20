@@ -1,10 +1,12 @@
 let StartFunc = () => {
     let jVarLocalBodyKeysJson = {};
 
-    let jVarLocalPassword = document.getElementById('SecretId').value;
+    let jVarLocalUserName = document.getElementById('UsernameId').value;
+    let jVarLocalPassword = document.getElementById('PasswordId').value;
 
-    jVarLocalBodyKeysJson.Secret = parseInt(jVarLocalPassword);
-
+    jVarLocalBodyKeysJson.UserName = jVarLocalUserName;
+    jVarLocalBodyKeysJson.Password = jVarLocalPassword;
+    
     return jVarLocalBodyKeysJson;
 };
 
