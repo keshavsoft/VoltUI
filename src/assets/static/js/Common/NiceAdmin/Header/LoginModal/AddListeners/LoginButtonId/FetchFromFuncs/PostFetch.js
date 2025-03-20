@@ -1,9 +1,11 @@
 import { StartFunc as StartFuncFetchHeaders } from "./FetchHeaders/EntryFile.js";
+// import ConfigJson from "../../../Config.json" with { type: "json" };
 
 let StartFunc = async () => {
+    
     let jVarLocalFetchHeaders = StartFuncFetchHeaders();
     
-    let jVarLocalFetchUrl = `/Login/LoginAdmin/CreateToken/UsingJwt`;
+    let jVarLocalFetchUrl = `/Login/LoginAdmin/Admin/UsingJwt/CreateToken`;
 
     let response = await fetch(jVarLocalFetchUrl, jVarLocalFetchHeaders);
     
