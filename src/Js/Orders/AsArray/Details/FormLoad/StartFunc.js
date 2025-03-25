@@ -1,9 +1,9 @@
-import { StartFunc as StartFuncAddListeners } from "./AddListeners/StartFunc.js";
-import { StartFunc as StartFuncFromUrlParams } from "./FromUrlParams/EntryFile.js";
+import { StartFunc as ShowOnDom } from "./ShowOnDom/StartFunc.js";
+import { StartFunc as BuildBsTable } from "./BuildBsTable/EntryFile.js";
 
-const StartFunc = () => {
-    StartFuncFromUrlParams();
-    StartFuncAddListeners();
+const StartFunc = async () => {
+    BuildBsTable();
+    ShowOnDom();
 };
 
 export { StartFunc };
