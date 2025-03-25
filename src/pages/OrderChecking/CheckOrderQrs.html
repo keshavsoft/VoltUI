@@ -186,6 +186,30 @@
             </div>
         </a>
     </template>
+    <div class="modal fade" id="LoginModalId" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form class="login-form">
+                        <h2 class="text-center mb-4">Login</h2>
+
+                        <div class="mb-3">
+                            <input type="test" name="UserName" id="UsernameId" class="form-control"
+                                placeholder="UserName">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" name="password" id="PasswordId" class="form-control"
+                                placeholder="password">
+                        </div>
+                        <div class="mb-3 text-center mt-3">
+                            <button type="button" id="LoginButtonId"
+                                class="btn btn-primary btn-block w-100">Sign</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     @@include('./OrderChecking/_scripts.html', {
     "path": "../.."
     })
@@ -210,7 +234,7 @@
     <script src="../assets/static/NiceAdmin/js/main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="module" src="../../Js/OrderChecking/CheckOrderQrs/StartFunc.js"></script>
+    <script type="module" src="../../Js/OrderChecking/CheckOrder/StartFunc.js"></script>
 
 </body>
 
