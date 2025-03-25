@@ -86,7 +86,30 @@
         "classes": "bg-gray-800 text-white"
         })
     </main>
+    <div class="modal fade" id="LoginModalId" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form class="login-form">
+                        <h2 class="text-center mb-4">Login</h2>
 
+                        <div class="mb-3">
+                            <input type="test" name="UserName" id="UsernameId" class="form-control" 
+                                placeholder="UserName">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" name="password" id="PasswordId" class="form-control" 
+                                placeholder="password">
+                        </div>
+                        <div class="mb-3 text-center mt-3">
+                            <button type="button" id="LoginButtonId"
+                                class="btn btn-primary btn-block w-100">Sign</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     @@include('./Orders/AsArray/_scripts.html', {
     "path": "../../.."
     })
@@ -95,7 +118,7 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.js"></script>
 
-    <script type="module" src="../../../Js/Orders/AsArray/Count/entryFile.js"></script>
+    <script type="module" src="../../../Js/Orders/AsArray/Count/StartFunc.js"></script>
 </body>
 
 </html>
