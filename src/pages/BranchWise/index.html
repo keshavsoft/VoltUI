@@ -19,27 +19,26 @@
 <html lang="en">
 
 <head>
-    @@include('./Menu/_head.html', {
-    "path": "../",
+    @@include('./BranchWise/Menu/_head.html', {
+    "path": "../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
 </head>
 
 <body>
-    @@include('./dashboard/_nav.html', {
-    "path": "../"
+    @@include('./BranchWise/Menu/_nav.html', {
+    "path": "../.."
     })
 
-    @@include('./Menu/_sidenav.html', {
-    "path": "../",
+    @@include('./BranchWise/Menu/_sidenav.html', {
+    "path": "../..",
     "page": "showall",
     "parentmenu":"time"
     })
 
     <main class="content">
-
-        @@include('./dashboard/_topbar.html', {
-        "path": "../"
+        @@include('./BranchWise/Menu/_topbar.html', {
+        "path": "../.."
         })
 
         <div class="py-4">
@@ -251,17 +250,15 @@
            
         </div>
         
-        @@include('./dashboard/_footer.html', {
+        @@include('./BranchWise/Menu/_footer.html', {
         "path": "../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
-    @@include('./BSTable/_scripts.html', {
-    "path": "../"
+    @@include('./BranchWise/Menu/_scripts.html', {
+    "path": "../.."
     })
-
-    <script type="module" src="../../Js/BranchWise/Status/Show/entryFile.js"></script>
 </body>
 
 </html>

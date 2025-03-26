@@ -20,7 +20,7 @@
 
 <head>
     @@include('./BranchWise/QrCodes/_head.html', {
-    "path": "../..",
+    "path": "../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
     <link rel="stylesheet" 
@@ -30,25 +30,18 @@
 </head>
 
 <body>
-
-    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
-    @@if (environment === 'production') {
-    @@include('./_analytics_body.html')
-    }
-
     @@include('./BranchWise/QrCodes/_nav.html', {
-    "path": "../.."
+    "path": "../../.."
     })
 
     @@include('./BranchWise/QrCodes/_sidenav.html', {
-    "path": "../..",
+    "path": "../../..",
     "page": "Orderindex"
     })
 
     <main class="content">
-
         @@include('./BranchWise/QrCodes/_topbar.html', {
-        "path": "../.."
+        "path": "../../.."
         })
 
         <div class="py-4 d-print-none">
@@ -94,7 +87,7 @@
           </div>
 
         @@include('./BranchWise/QrCodes/_footer.html', {
-        "path": "../..",
+        "path": "../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
@@ -193,7 +186,7 @@
         </div>
     </div>
     @@include('./BranchWise/QrCodes/_scripts.html', {
-    "path": "../.."
+    "path": "../../.."
     })
     <script type="module" src="../../Js/QrCodes/Index/StartFunc.js"></script>
 </body>

@@ -20,7 +20,7 @@
 
 <head>
     @@include('./BranchWise/QrCodes/_head.html', {
-    "path": "../..",
+    "path": "../../..",
     "title": "KeshavSoft"
     })
     <link rel="stylesheet" href="../../Js/BranchWise/Dashboard/Show/Css/Styles.css">
@@ -30,19 +30,18 @@
 
 <body>
     @@include('./BranchWise/QrCodes/_nav.html', {
-    "path": "../.."
+    "path": "../../.."
     })
 
     @@include('./BranchWise/QrCodes/_sidenav.html', {
-    "path": "../..",
+    "path": "../../..",
     "page": "Dashboard",
     "page_group": "Status"
     })
 
     <main class="content">
-
         @@include('./BranchWise/QrCodes/_topbar.html', {
-        "path": "../.."
+        "path": "../../.."
         })
 
         <div class="py-4 d-print-none">
@@ -83,20 +82,20 @@
 
 
         @@include('./BranchWise/QrCodes/_footer.html', {
-        "path": "../..",
+        "path": "../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
 
     @@include('./BranchWise/QrCodes/_scripts.html', {
-    "path": "../.."
+    "path": "../../.."
     })
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.js"></script>
 
-    <script type="module" src="../../Js/BranchWise/Dashboard/Show/entryFile.js"></script>
+    <script type="module" src="../../../Js/BranchWise/Dashboard/Show/entryFile.js"></script>
 </body>
 
 </html>
