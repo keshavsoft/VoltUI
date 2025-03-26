@@ -1,0 +1,77 @@
+{
+    "toolbar": "#toolbar",
+    "idfield": "pk",
+    "showFooter": "true",
+    "data": [],
+    "onClickRow": "",
+    "rowStyle": "rowStyle",
+    "pageSize": "5",
+    "columns": [
+        {
+            "field": "KS-Serial",
+            "title": "#",
+            "formatter": ""
+        },
+        {
+            "field": "QrCodeId",
+            "title": "Qr"
+        },
+        {
+            "title": "Branch",
+            "field": "BranchScanStatus",
+            "formatter": ""
+        },
+        {
+            "title": "Entry",
+            "field": "EntryScanStatus",
+            "formatter": ""
+        },
+        {
+            "title": "Entry_C",
+            "field": "EntryCancel",
+            "formatter": ""
+        },
+        {
+            "title": "Wash",
+            "field": "WashingScanStatus",
+            "formatter": ""
+        },
+        {
+            "title": "Pro",
+            "field": "PressingScanStatus",
+            "formatter": ""
+        },
+        {
+            "title": "Pro_C",
+            "field": "ProcessReturn",
+            "formatter": ""
+        },
+        {
+            "title": "F_Out",
+            "field": "CompletionScanStatus",
+            "formatter": ""
+        },
+        {
+            "title": "F_Recd",
+            "field": "Scan",
+            "formatter": "QRCodeGenerate"
+        },
+        {
+            "title": "Delivery",
+            "field": "Delivery",
+            "formatter": ""
+        },
+        {
+            "field": "ItemName",
+            "title": "Item"
+        },
+        {
+            "field": "OrderDate",
+            "title": "Order_Dt"
+        },
+        {
+            "field": "DeliveryDate",
+            "title": "Delivery_Dt"
+        }
+    ]
+}
