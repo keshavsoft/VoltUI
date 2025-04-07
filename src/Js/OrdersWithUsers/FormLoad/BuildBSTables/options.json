@@ -1,0 +1,70 @@
+{
+    "toolbar": "#toolbar",
+    "idfield": "pk",
+    "showFooter": "true",
+    "data": [],
+    "detailView": true,
+    "onClickRow": "",
+    "pagination": "true",
+    "pageList": "[10,50,100,All]",
+    "onExpandRow": "",
+    "icons": "",
+    "columns": [
+        {
+            "field": "KS-Serial",
+            "title": "#"
+            
+        },
+        {
+            "field": "pk",
+            "title": "Order#"
+            
+        },
+        {
+            "field": "CustomerData.CustomerName",
+            "title": "CustomerName"
+            
+        },
+        {
+            "field": "CustomerData.CustomerMobile",
+            "title": "Mobile"
+            
+        },
+        {
+            "field": "OrderData.Currentdateandtime",
+            "title": "Date",
+            "formatter": "LocalDate",
+            "visible": true
+        },
+        {
+            "field": "OrderData.Currentdateandtime",
+            "title": "OrderDate",
+            "formatter": "TimeDiff",
+            "class": "d-none d-sm-table-cell",
+            "visible": false
+        },
+        {
+            "field": "AggValues.ItemDetails",
+            "title": "Items",
+            "footerFormatter": "ItemsFormatter",
+            "class": "d-none d-sm-table-cell"
+
+        },
+        {
+            "field": "AggValues.SettlementAmount",
+            "title": "Settlement",
+            "footerFormatter": "priceFormatter",
+            "align": "right",
+            "class": "d-none d-sm-table-cell"
+        },
+        {
+            "field": "IsSettled",
+            "title": "IsSettled",
+            "formatter":""
+        },
+        {
+            "field": "UserName",
+            "title": "Users"
+        }
+    ]
+}

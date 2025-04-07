@@ -95,6 +95,14 @@
                     <span class="sidebar-text">AllOrdersWithQR</span>
                 </a>
             </li>
+            <li class="nav-item @@if (context.page === 'OrdersWithUsers') { active }">
+                <a href="@@path/pages/OrdersWithUsers/OrdersWithUsers.html" class="nav-link">
+                    <span class="sidebar-icon">
+                        <i class="bi bi-people-fill" style="color: #8c5190;"></i>
+                    </span>
+                    <span class="sidebar-text">OrdersWithUsers</span>
+                </a>
+            </li>
 
             <li class="nav-item @@if (context.page === 'UpComingDelivery') { active }">
                 <a href="@@path/pages/UpcomingDelivery/UpComingDelivery.html" class="nav-link">
