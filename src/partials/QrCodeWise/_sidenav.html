@@ -1,4 +1,4 @@
-<nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
+<nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse d-print-none" data-simplebar>
     <div class="sidebar-inner px-4 pt-3">
         <div
             class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
@@ -34,6 +34,14 @@
             </div>
         </div>
         <ul class="nav flex-column pt-3 pt-md-0">
+            <!-- <li class="nav-item">
+                <a href="@@path/index.html" class="nav-link d-flex align-items-center">
+                    <span class="sidebar-icon">
+                        <img src="@@path/assets/img/brand/light.svg" height="20" width="20" alt="Volt Logo">
+                    </span>
+                    <span class="mt-1 ms-1 sidebar-text">Volt Overview</span>
+                </a>
+            </li> -->
             <li class="nav-item">
                 <a href="/" class="nav-link d-flex align-items-center">
                     <span>
@@ -48,16 +56,9 @@
                     </span>
                 </a>
             </li>
+
             <li class="nav-item">
-                <a href="#" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <i class="bi bi-speedometer2" style="color: #ff5733;"></i>
-                    </span>
-                    <span class="mt-1 ms-1 sidebar-text">Dashboard</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="../../Laundry/Admin/Menu/HtmlFiles/index.html" class="nav-link d-flex align-items-center">
+                <a href="@@path/pages/index.html" class="nav-link d-flex align-items-center">
                     <span>
                         <span class="sidebar-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -70,72 +71,64 @@
                     </span>
                 </a>
             </li>
-            <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
 
-            <li class="nav-item">
-                <a href="./QrCodes/index.html" class="nav-link d-flex align-items-center">
+            <li class="nav-item @@if (context.page === 'Orderindex') { active }">
+                <a href="@@path/pages/QrCodeWise/index.html" class="nav-link">
                     <span class="sidebar-icon">
-                        <i class="bi bi-shop-window" style="color: #007bff;"></i> <!-- Blue -->
+                        <i class="bi bi-speedometer2" style="color: #ff5733;"></i>
                     </span>
-                    <span class="mt-1 ms-1 sidebar-text">QR Codes</span>
+                    <span class="sidebar-text">Dashboard</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="./Orders/index.html" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <i class="bi bi-border-style" style="color: #28a745;"></i> <!-- Green -->
+                <span
+                    class="nav-link @@if (context.page_group !== 'QrCodeWise') { collapsed } d-flex justify-content-between align-items-center"
+                    data-bs-toggle="collapse" data-bs-target="#submenu-Orders">
+                    <span>
+                        <span class="sidebar-icon">
+                            <i class="bi bi-qr-code-scan" style="color: #6610f2;"></i>
+                        </span>
+                        <span class="sidebar-text">QrCodeWise</span>
                     </span>
-                    <span class="mt-1 ms-1 sidebar-text">Orders</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="./Dcs/index.html" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <i class="bi bi-diagram-3" style="color: #dc3545;"></i> <!-- Red -->
+                    <span class="link-arrow">
+                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
                     </span>
-                    <span class="mt-1 ms-1 sidebar-text">Dcs</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="./OrderChecking/index.html" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <i class="bi bi-border-style" style="color: #28a745;"></i> <!-- Green -->
-                    </span>
-                    <span class="mt-1 ms-1 sidebar-text">Check</span>
-                </a>
-            </li>
-            <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
-
-            <li class="nav-item">
-                <a href="./Masters" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <i class="bi bi-diagram-3" style="color: #dc3545;"></i> <!-- Red -->
-                    </span>
-                    <span class="mt-1 ms-1 sidebar-text">Masters</span>
-                </a>
-            </li>
-
-            <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
-
-            <li class="nav-item">
-                <a href="./BranchWise" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <i class="bi bi-diagram-3" style="color: #dc3545;"></i> <!-- Red -->
-                    </span>
-                    <span class="mt-1 ms-1 sidebar-text">BranchWise</span>
-                </a>
-            </li>
-
-            <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
-
-            <li class="nav-item">
-                <a href="./QrCodeWise" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <i class="bi bi-upc-scan" style="color: #20c997;"></i> <!-- Teal -->
-                    </span>
-                    <span class="mt-1 ms-1 sidebar-text">QrCodeWise</span>
-                </a>
+                </span>
+                <div class="multi-level collapse @@if (context.page_group === 'QrCodeWise') { show }" role="list"
+                    id="submenu-Orders" aria-expanded="false">
+                    <ul class="flex-column nav">
+                        <li class="nav-item @@if (context.page === 'AsIs') { active }">
+                            <a class="nav-link d-flex align-items-center" href="@@path/pages/QrCodeWise/AsIs.html">
+                                <i class="bi bi-chevron-right me-3" style="color: #20c997;"></i>
+                                <span class="sidebar-text">AsIs</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'EntryDet') { active }">
+                            <a class="nav-link d-flex align-items-center" href="@@path/pages/QrCodeWise/EntryDet.html">
+                                <i class="bi bi-chevron-right me-3" style="color: #fd7e14;"></i>
+                                <span class="sidebar-text">EntryDet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'WashDet') { active }">
+                            <a class="nav-link d-flex align-items-center" href="@@path/pages/QrCodeWise/WashDet.html">
+                                <i class="bi bi-chevron-right me-3" style="color: #0d6efd;"></i>
+                                <span class="sidebar-text">WashDet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'WithVouDet') { active }">
+                            <a class="nav-link d-flex align-items-center" href="@@path/pages/QrCodeWise/WithVouDet.html">
+                                <i class="bi bi-chevron-right me-3" style="color: #dc3545;"></i>
+                                <span class="sidebar-text">WithVouDet</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             
         </ul>
