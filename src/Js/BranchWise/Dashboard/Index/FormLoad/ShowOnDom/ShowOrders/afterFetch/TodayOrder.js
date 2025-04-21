@@ -5,7 +5,7 @@ const StartFunc = (data) => {
         let clone = template.cloneNode(true);
         clone.querySelector('.BranchNameClass').innerHTML=element.BranchName;
         clone.querySelector('.BranchOrderCountClass').innerHTML=element.QrCount;
-        clone.querySelector('.todayOrderClass').href="../BranchWise/TodayDashboardQrCodes.html?Branch="+element.BranchName;
+        clone.querySelector('.todayOrderClass').href="../../QrCodesDashBoard/QrCodes/TodayDashboardQrCodes.html?Branch="+element.BranchName;
         container.appendChild(clone);
     });
 };
