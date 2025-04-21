@@ -1,18 +1,17 @@
 let StartFunc = ({ inFindColumn }) => {
     inFindColumn.formatter = jVarLocalFormatterFunc;
     inFindColumn.footerFormatter = priceFormatter;
-
 };
 
 let jVarLocalFormatterFunc = (value, row, index) => {
     const jVarLocalBranchName = row.BranchName;
-        return [
-            `<a class="like btn btn-primary" target="blank" href="./statusShowAll.html?BranchName=${jVarLocalBranchName}" title="Show">`,
-            `<i class="bi bi-qr-code"></i> `,
-            row.QrCount,
-            '</a>',
+    return [
+        `<a class="like btn btn-primary" target="blank" href="./statusShowAll.html?BranchName=${jVarLocalBranchName}" title="Show">`,
+        `<i class="bi bi-qr-code"></i> `,
+        row.QrCount,
+        '</a>',
 
-        ].join('')
+    ].join('')
 
 }
 
@@ -26,9 +25,9 @@ function priceFormatter(data) {
     }).reduce(function (sum, i) {
         return sum + i
     }, 0);
-    let total= Math.floor(LocalTotal);
+    let total = Math.floor(LocalTotal);
     return [
-        `<a class="like btn btn-info" target="blank" href="../../AsArray/HtmlFiles/statusShowAll.html" title="Show">`,
+        `<a class="like btn btn-info" target="blank" href="#" title="Show">`,
         `<i class="bi bi-qr-code"></i> `,
         total,
         '</a>',
